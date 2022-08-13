@@ -20,6 +20,14 @@ public class HomePage {
 
        @FindBy (xpath = "//ul[@class='treeview-menu menu-open']")
        public WebElement humanResourceModuleMenu;
+
+       @FindBy (xpath = "//span[normalize-space()='Academics']")
+       public WebElement academicsModule;
+
+       @FindBy (xpath = "//a[normalize-space()='Class']")
+       public WebElement classModule;
+
+
    
        public HomePage() {
            PageFactory.initElements(WebDriverUtils.driver, this);
