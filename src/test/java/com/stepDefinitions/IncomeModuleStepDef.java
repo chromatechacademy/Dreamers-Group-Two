@@ -9,6 +9,7 @@ import com.constants.ApplicationConstants;
 import com.pages.HomePage;
 import com.pages.LoginPage;
 import com.utils.CucumberLogUtils;
+import com.web.CommonUtils;
 import com.web.WebDriverUtils;
 
 import cucumber.api.java.en.Given;
@@ -67,7 +68,9 @@ public class IncomeModuleStepDef {
     @When("user clicks on the Income module")
     public void user_clicks_on_the_Income_module() throws InterruptedException {
         homePage.incomeModule.click();
-        Thread.sleep(3000);
+
+        CommonUtils.waitForVisibility(homePage.incomeModule);
+        
         
 
     }
