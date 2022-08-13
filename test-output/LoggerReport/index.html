@@ -51,6 +51,14 @@
 							</a>
 						</li>
 						<li>
+							<a href="exception.html">
+							<span class="nav-icon">
+							<i class="fa fa-warning"></i>
+							</span>
+							<span class="nav-text">Exceptions</span>
+							</a>
+						</li>
+						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -95,7 +103,7 @@
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
-										
+										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
 										
 										
 										
@@ -112,7 +120,7 @@
 								        </span>
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-						    	        <a class="dropdown-item" href="#"><span class="cf">@SampleRun</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@Progression</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -129,23 +137,23 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="pass">
-											<div class="st pass test l0" 
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
 												tags=""
 												devices="">
-												<span class="tt">08.08.2022 18:16:49</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">[Sample] started</span>
+												<span class="tt">08.12.2022 21:55:24</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">[Student Categories] started</span>
 												
 											</div>
-											<div class="st pass test l1" 
-												tags="@SampleRun"
+											<div class="st fail test l1" 
+												tags="@Progression"
 												devices="">
-												<span class="tt">08.08.2022 18:16:49</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">|---[Sample scenario] started</span>
+												<span class="tt">08.12.2022 21:55:24</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[Add student category] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @SampleRun</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Progression</span>
 												</span>
 												<span class="author-list">
 												</span>
@@ -156,16 +164,166 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.08.2022 18:16:49</span>&nbsp;
+												<span class="tt">08.12.2022 21:55:24</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given this step can be used to specify a pre-condition] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is on the chromatech website] started</span>
 												
-												<div class="st info">
-													<span class="tt">08.08.2022 18:16:51</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given this step can be used to specify a pre-condition]</span>
-													<span class="tm"><img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded1.png' src='test-output/embedded1.png'></span>
+												<div class="st pass">
+													<span class="tt">08.12.2022 21:55:30</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is on the chromatech website]</span>
+													
 													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.12.2022 21:55:30</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When User enters username "general@teacher.com"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.12.2022 21:55:30</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When User enters username "general@teacher.com"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.12.2022 21:55:30</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User enters password "123456"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.12.2022 21:55:30</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User enters password "123456"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.12.2022 21:55:30</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User clicks sign in] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.12.2022 21:55:31</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User clicks sign in]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.12.2022 21:55:31</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User clicks Student Information] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.12.2022 21:55:36</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User clicks Student Information]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.12.2022 21:55:36</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User clicks Student Categories] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.12.2022 21:55:42</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User clicks Student Categories]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.12.2022 21:55:42</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User enters Category "Java"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.12.2022 21:55:45</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User enters Category "Java"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.12.2022 21:55:45</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User clicks save] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.12.2022 21:55:48</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User clicks save]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st fail test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.12.2022 21:55:48</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Student Category is added] started</span>
+												
+												<div class="st fail">
+													<span class="tt">08.12.2022 21:55:48</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Student Category is added]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'Selenium')]"}
+  (Session info: chrome=104.0.5112.79)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'Ashifs-Air', ip: 'fe80:0:0:0:8f9:d054:c505:5846%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.2', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4fe05bfd364f70bafe609c6dde851287, findElement {using=xpath, value=//*[contains(text(),'Selenium')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /var/folders/7q/vgpsy1b9493...}, goog:chromeOptions: {debuggerAddress: localhost:58084}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:58084/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4fe05bfd364f70bafe609c6dde851287
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.isDisplayed(Unknown Source)
+	at com.stepDefinitions.StudentCategoriesStepDef.student_Category_is_added(StudentCategoriesStepDef.java:105)
+	at ✽.Student Category is added(file:src/test/java/com/features/StudentCategories.feature:14)
+</textarea></span>
 												</div>
 											</div>
 											</div>
