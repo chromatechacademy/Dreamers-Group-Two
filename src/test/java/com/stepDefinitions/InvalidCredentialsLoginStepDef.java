@@ -4,6 +4,7 @@ import org.testng.Assert;
 
 import com.constants.ApplicationConstants;
 import com.pages.LoginPage;
+import com.utils.CucumberLogUtils;
 import com.web.WebDriverUtils;
 
 import cucumber.api.java.en.Given;
@@ -27,13 +28,13 @@ public class InvalidCredentialsLoginStepDef {
         loginPage.usernameTextBox.sendKeys("test@testmail.com");
         loginPage.passwordTextBox.sendKeys("Happy123!");
         loginPage.signInButton.click();
-        Thread.sleep(4000);
     }
 
     @Then("a user should see message {string}")
     public void a_user_should_see_message(String expectedPageTitle) {
         String actualPageTitle = loginPage.invalidUsernameOrPasswordMessage.getText();
         Assert.assertTrue(expectedPageTitle.contentEquals(actualPageTitle));
+        CucumberLogUtils.logScreenShot();
 
     }
 }
