@@ -100,9 +100,14 @@ public class AddAndDeleteClasses {
 
     }
 
-    /** Verifying the new class added into class section */
-    @Then("class |{string} has to be appeared in Class List section")
+    /**
+     * Verifying the new class added into class section
+     * 
+     * @throws IOException
+     */
+    @Then("class {string} has to be appeared in Class List section")
     public void class_has_to_be_appeared_in_Class_List_section(String newClass) throws IOException {
+
         /** Asserting the new class is in class section */
         Assert.assertTrue(classPage.classList.getText().contains(newClass));
         CommonUtils.waitForVisibility(classPage.classList);
