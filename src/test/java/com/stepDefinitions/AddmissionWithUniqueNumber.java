@@ -153,11 +153,7 @@ public class AddmissionWithUniqueNumber {
 
     }
 
-    @Then("user selects API Testing option in Section of Bulk Delete module")
-    public void user_selects_API_Testing_option_in_Section_of_Bulk_Delete_module() {
-        CommonUtils.waitForClickability(bulkDeletePage.sectionBulkDelete);
-        bulkDeletePage.sectionBulkDelete.click();
-    }
+  
 
     @Then("user clicks on Search button")
     public void user_clicks_on_Search_button() throws IOException {

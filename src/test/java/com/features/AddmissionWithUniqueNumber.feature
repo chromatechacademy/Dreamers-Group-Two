@@ -23,7 +23,6 @@ Feature: Admission with unique number
         Then user is not able to admit new student and "The Admission No field must contain a unique value." should displays on Student Admission page
         And user navigates to Bulk Delete section of Student Information module
         And user selects SDET option in class section in Bulk Delete module
-        And user selects API Testing option in Section of Bulk Delete module
         And user clicks on Search button
         And user selects student with unique admission number "554433"
         And user clicks on Delete button

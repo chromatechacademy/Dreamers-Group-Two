@@ -27,7 +27,7 @@ public class BulkDeletePage {
     @FindBy(xpath = "//button[@id='load']")
     public WebElement deleteButton;
 
-    @FindBy (xpath = "//div[@align='center']")
+    @FindBy (xpath = "//div[@id='DataTables_Table_0_wrapper']")
     public WebElement classList;
 
     public BulkDeletePage() {
