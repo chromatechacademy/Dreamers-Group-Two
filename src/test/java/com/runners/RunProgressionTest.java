@@ -1,5 +1,6 @@
 package com.runners;
 
+
 import org.junit.runner.RunWith;
 
 import cucumber.api.CucumberOptions;
@@ -12,7 +13,7 @@ import cucumber.api.junit.Cucumber;
         "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }, 
         features = "src/test/java/com/features", 
         glue = "com.stepDefinitions", 
-        tags = "@DRM2-18", 
+        tags = "@DRM2-13", 
         dryRun = false, 
         monochrome = true, 
         strict = true)

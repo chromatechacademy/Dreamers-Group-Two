@@ -26,6 +26,10 @@ public class HomePage {
     /** Class section of Academics Module */
     @FindBy(xpath = "//a[normalize-space()='Class']")
     public WebElement classModule;
+    @FindBy(xpath = "//span[normalize-space()='Student Information']")
+    public WebElement studentInformation;
+    @FindBy(xpath = "//a[normalize-space()='Student Admission']")
+    public WebElement studentAdmission;
 
     public HomePage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
