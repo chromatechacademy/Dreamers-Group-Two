@@ -1,13 +1,9 @@
 package com.runners;
 
-
-
 import org.junit.runner.RunWith;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
-
-
 
 
 @RunWith(Cucumber.class)
@@ -17,13 +13,13 @@ import cucumber.api.junit.Cucumber;
 		features = "src/test/java/com/features", 
 		glue = "com.stepDefinitions", 
 		tags = "@Progression", 
-		dryRun = false, 
+		dryRun = false,
 		monochrome = true, 
 		strict = true
 )
 
 
-
 public class RunProgressionTest {
     
+
 }
