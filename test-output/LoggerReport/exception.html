@@ -125,10 +125,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="12" parent-id="1">
+<tr class="s-fail" test-id="29" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And user selects API Testing option in Section module <br/><span class="text-muted text-sm">CTSMS - Student Admission unique admission number</span></td>
-	<td>0h 0m 0s+83msc</td>
+	<td class="_600">Then student with unique admission number "554433" shall not be displayed on class List <br/><span class="text-muted text-sm">CTSMS - Student Admission unique admission number</span></td>
+	<td>0h 0m 0s+155msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -137,15 +137,15 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//option[@value='14']"}
+		<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@align='center']"}
   (Session info: chrome=104.0.5112.79)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.3.0', revision: 'a4995e2c09*'
 System info: host: 'Vladyslavs-MacBook-Air.local', ip: '2601:704:101:1500:c585:fd9b:f9ec:af89%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.5', java.version: '11.0.15.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [aac5e1f3d4e2da2ee1eb2ed0c07c6ec3, findElement {using=xpath, value=//option[@value='14']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /var/folders/pn/xl2txvyd07z...}, goog:chromeOptions: {debuggerAddress: localhost:59904}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:59904/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: aac5e1f3d4e2da2ee1eb2ed0c07c6ec3
+Command: [0be5fabe8a5cf088ab0d7dee9f4792c4, findElement {using=xpath, value=//div[@align='center']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /var/folders/pn/xl2txvyd07z...}, goog:chromeOptions: {debuggerAddress: localhost:54097}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:54097/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0be5fabe8a5cf088ab0d7dee9f4792c4
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -163,9 +163,9 @@ Session ID: aac5e1f3d4e2da2ee1eb2ed0c07c6ec3
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy21.click(Unknown Source)
-	at com.stepDefinitions.AddmissionWithUniqueNumber.user_selects_API_Testing_option_in_Section_module(AddmissionWithUniqueNumber.java:73)
-	at ✽.user selects API Testing option in Section module(file:src/test/java/com/features/AddmissionWithUniqueNumber.feature:14)
+	at com.sun.proxy.$Proxy21.getText(Unknown Source)
+	at com.stepDefinitions.AddmissionWithUniqueNumber.student_with_unique_admission_number_shall_not_be_displayed_on_class_List(AddmissionWithUniqueNumber.java:187)
+	at ✽.student with unique admission number "554433" shall not be displayed on class List(file:src/test/java/com/features/AddmissionWithUniqueNumber.feature:30)
 </textarea>
 	</td>
 </tr>
@@ -193,7 +193,7 @@ Session ID: aac5e1f3d4e2da2ee1eb2ed0c07c6ec3
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 14, 2022 10:28:14 AM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 14, 2022 05:06:21 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

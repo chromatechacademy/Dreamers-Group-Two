@@ -110,7 +110,7 @@ public class AddmissionWithUniqueNumber {
     @When("user enters {string} in Gurdian phone")
     public void user_enters_in_Gurdian_phone(String phoneNumber) throws InterruptedException, IOException {
         studentAdmissionPage.guardianPhoneNumber.sendKeys(phoneNumber);
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
     }
@@ -176,7 +176,7 @@ public class AddmissionWithUniqueNumber {
     @Then("user clicks on Delete button")
     public void user_clicks_on_Delete_button() throws InterruptedException {
         bulkDeletePage.deleteButton.click();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         CommonUtils.acceptAlert();
 
     }
@@ -184,8 +184,9 @@ public class AddmissionWithUniqueNumber {
     @Then("student with unique admission number {string} shall not be displayed on class List")
     public void student_with_unique_admission_number_shall_not_be_displayed_on_class_List(String uniqueAdmissionNumber)
             throws IOException {
-        Assert.assertFalse(bulkDeletePage.classList.getText().contentEquals(uniqueAdmissionNumber));
         CommonUtils.waitForVisibility(bulkDeletePage.classList);
+        Assert.assertFalse(bulkDeletePage.classList.getText().contentEquals(uniqueAdmissionNumber));
+
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
     }
