@@ -108,12 +108,12 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">org.openqa.selenium.NoSuchElementException</a>
+							<a href="#" class="item-title _500">org.openqa.selenium.NoSuchWindowException</a>
 							<div class="item-except text-sm text-muted h-1x">
 								1 tests
 							</div>
 							<div class="tc d-none">
-								<h5 class="mb-4">org.openqa.selenium.NoSuchElementException</h5>
+								<h5 class="mb-4">org.openqa.selenium.NoSuchWindowException</h5>
 								<table class="table">
 									<thead><tr>
 										<th id="status-col"></th>
@@ -125,27 +125,47 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="9" parent-id="1">
+<tr class="s-fail" test-id="6" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And a teacher or admin admits student with the information "123456","2468","SDET","Testing Fundamentals","Lauren","Flores","Female","<dateOfBirth","Testing sample","laurenflores23@hotmail.com","08/13/2022","A+","08/13/2022","703-875-9686","5'3","160" <br/><span class="text-muted text-sm">Student Admissions</span></td>
-	<td>0h 0m 0s+248msc</td>
+	<td class="_600">When a teacher or admin is logging in with username "general@teacher.com" and password "123456" <br/><span class="text-muted text-sm">Student Admissions</span></td>
+	<td>0h 0m 0s+590msc</td>
 	<td></td>
 	<td>
+		<img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded2.png' src='test-output/embedded2.png'>
 	</td>
 	<td class="static"><i class="static fa fa-external-link"></i></td>
 </tr>
 <tr class="details">
 	<td colspan="5">
+		<textarea disabled class="code-block"></textarea>
 		
-		<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Cannot locate option with text: Testing Fundamentals
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+		
+		<textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
+  (Session info: chrome=104.0.5112.79)
 Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'Diegos-MacBook-Pro-2.local', ip: '2600:8806:3204:da00:0:0:0:f7f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.3', java.version: '11.0.15'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151)
-	at com.web.CommonUtils.selectDropDownValue(CommonUtils.java:84)
-	at com.stepDefinitions.StudentAdmissionStepDef.a_teacher_or_admin_admits_student_with_the_information(StudentAdmissionStepDef.java:34)
-	at ✽.a teacher or admin admits student with the information "123456","2468","SDET","Testing Fundamentals","Lauren","Flores","Female","<dateOfBirth","Testing sample","laurenflores23@hotmail.com","08/13/2022","A+","08/13/2022","703-875-9686","5'3","160"(file:src/test/java/com/features/StudentAdmission.feature:9)
+System info: host: 'Diegos-MacBook-Pro-2.local', ip: '2600:8806:3204:da00:0:0:0:515%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.3', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6503d15eef02549669f4362d67b0a4e8, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /var/folders/mg/0m80hqvd763...}, goog:chromeOptions: {debuggerAddress: localhost:64221}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:64221/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6503d15eef02549669f4362d67b0a4e8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:624)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:353)
+	at com.utils.CucumberLogUtils.getScreenShot(CucumberLogUtils.java:41)
+	at com.utils.CucumberLogUtils.logExtentScreenshot(CucumberLogUtils.java:56)
+	at com.stepDefinitions.LoginStepDef.a_teacher_or_admin_is_logging_in_with_username_and_password(LoginStepDef.java:34)
+	at ✽.a teacher or admin is logging in with username "general@teacher.com" and password "123456"(file:src/test/java/com/features/StudentAdmission.feature:6)
 </textarea>
 	</td>
 </tr>
@@ -173,7 +193,7 @@ Driver info: driver.version: unknown
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 13, 2022 02:02:11 AM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 14, 2022 05:06:47 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>
