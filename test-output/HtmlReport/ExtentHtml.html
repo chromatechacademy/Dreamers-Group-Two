@@ -53,7 +53,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 14, 2022 10:41:36 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Aug 14, 2022 04:54:04 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -81,6 +81,8 @@
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
 					<li><a href='#'>@DRM2-13</a></li>
+					<li><a href='#'>@Progression</a></li>
+					<li><a href='#'>@Vlad</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -151,7 +153,7 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>19</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>26</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
@@ -177,7 +179,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Admission with unique number</span>
-						<span class='test-time'>Aug 14, 2022 10:41:40 AM</span>
+						<span class='test-time'>Aug 14, 2022 04:54:08 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -190,14 +192,19 @@
 <div class='scenario node' test-id='2' status='pass'>
 	<div class='category-list'>
 		<span class='category label'>@DRM2-13</span>
+		<span class='category label'>@Progression</span>
+		<span class='category label'>@Vlad</span>
 	</div>
-	<span class='duration right label'>0h 0m 33s+357ms</span>
+	<span class='duration right label'>0h 0m 38s+481ms</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: CTSMS - Student Admission unique admission number</div>
 	</div>
 	<ul class='steps'>
 		<li test-id='4' class='node given pass' status='pass'>
-			<div class="step-name" title="AddmissionWithUniqueNumber.user_is_the_CTSMS_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user is the CTSMS login page</div>
+			<div class="step-name" title="IncomeModuleStepDef.user_is_on_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user is on login page</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="/Users/vladgolub/Desktop/Dreamers-Group-Two/test-output/screenshots/image_14082022_165410.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
 			<div class="node-step"></div>
 		</li>
 		<li test-id='5' class='node when pass' status='pass'>
@@ -255,7 +262,7 @@
 		<li test-id='18' class='node and pass' status='pass'>
 			<div class="step-name" title="AddmissionWithUniqueNumber.user_enters_in_Gurdian_phone(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user enters "111111111" in Gurdian phone</div>
 			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="/Users/vladgolub/Desktop/Dreamers-Group-Two/test-output/screenshots/image_14082022_104209.png"><i class='material-icons'>panorama</i></a></li>
+				<li><a data-featherlight="image" href="/Users/vladgolub/Desktop/Dreamers-Group-Two/test-output/screenshots/image_14082022_165432.png"><i class='material-icons'>panorama</i></a></li>
 			</ul>
 			<div class="node-step"></div>
 		</li>
@@ -274,7 +281,41 @@
 		<li test-id='22' class='node then pass' status='pass'>
 			<div class="step-name" title="AddmissionWithUniqueNumber.user_is_not_able_to_admit_new_student_and_should_displays_on_Student_Admission_page(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user is not able to admit new student and "The Admission No field must contain a unique value." should displays on Student Admission page</div>
 			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="/Users/vladgolub/Desktop/Dreamers-Group-Two/test-output/screenshots/image_14082022_104213.png"><i class='material-icons'>panorama</i></a></li>
+				<li><a data-featherlight="image" href="/Users/vladgolub/Desktop/Dreamers-Group-Two/test-output/screenshots/image_14082022_165436.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='23' class='node and pass' status='pass'>
+			<div class="step-name" title="AddmissionWithUniqueNumber.user_navigates_to_Bulk_Delete_section_of_Student_Information_module()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user navigates to Bulk Delete section of Student Information module</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='24' class='node and pass' status='pass'>
+			<div class="step-name" title="AddmissionWithUniqueNumber.user_selects_SDET_option_in_class_section_in_Bulk_Delete_module()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user selects SDET option in class section in Bulk Delete module</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='25' class='node and pass' status='pass'>
+			<div class="step-name" title="AddmissionWithUniqueNumber.user_selects_API_Testing_option_in_Section_of_Bulk_Delete_module()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user selects API Testing option in Section of Bulk Delete module</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='26' class='node and pass' status='pass'>
+			<div class="step-name" title="AddmissionWithUniqueNumber.user_clicks_on_Search_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user clicks on Search button</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="/Users/vladgolub/Desktop/Dreamers-Group-Two/test-output/screenshots/image_14082022_165439.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='27' class='node and pass' status='pass'>
+			<div class="step-name" title="AddmissionWithUniqueNumber.user_selects_student_with_unique_admission_number(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user selects student with unique admission number "554433"</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='28' class='node and pass' status='pass'>
+			<div class="step-name" title="AddmissionWithUniqueNumber.user_clicks_on_Delete_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user clicks on Delete button</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='29' class='node then pass' status='pass'>
+			<div class="step-name" title="AddmissionWithUniqueNumber.student_with_unique_admission_number_shall_not_be_displayed_on_class_List(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then student with unique admission number "554433" shall not be displayed on class List</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="/Users/vladgolub/Desktop/Dreamers-Group-Two/test-output/screenshots/image_14082022_165444.png"><i class='material-icons'>panorama</i></a></li>
 			</ul>
 			<div class="node-step"></div>
 		</li>
@@ -344,7 +385,73 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 14, 2022 10:41:40 AM</td>
+										<td>Aug 14, 2022 04:54:08 PM</td>
+										<td class='linked' test-id='2'>CTSMS - Student Admission unique admission number</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Progression</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Aug 14, 2022 04:54:08 PM</td>
+										<td class='linked' test-id='2'>CTSMS - Student Admission unique admission number</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Vlad</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Aug 14, 2022 04:54:08 PM</td>
 										<td class='linked' test-id='2'>CTSMS - Student Admission unique admission number</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -382,25 +489,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>19</div>
+					<div class='panel-lead'>26</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 14, 2022 10:41:36 AM</div>
+					<div class='panel-lead'>Aug 14, 2022 04:54:04 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 14, 2022 10:42:14 AM</div>
+			 		<div class='panel-lead'>Aug 14, 2022 04:54:47 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 37s+643ms</div>
+					<div class='panel-lead'>0h 0m 42s+814ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -417,6 +524,24 @@
 						</tr>
 						<tr>
 							<td>@DRM2-13</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Progression</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Vlad</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -453,8 +578,8 @@
 				infoChild: 0,
 				debugChild: 0,
 				exceptionsChild: 0,
-				grandChildCount: 19,
-				passGrandChild: 19,
+				grandChildCount: 26,
+				passGrandChild: 26,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -467,7 +592,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "Admission with unique number":33.357
+			        "Admission with unique number":38.481
 			};
 		</script>
 	

@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 
 import com.constants.ApplicationConstants;
+import com.pages.BulkDeletePage;
 import com.pages.HomePage;
 import com.pages.LoginPage;
 import com.pages.StudentAdmissionPage;
@@ -23,6 +24,7 @@ public class AddmissionWithUniqueNumber {
     LoginPage loginPage = new LoginPage();
     HomePage homePage = new HomePage();
     StudentAdmissionPage studentAdmissionPage = new StudentAdmissionPage();
+    BulkDeletePage bulkDeletePage = new BulkDeletePage();
 
     /** Link to Website URL */
 
@@ -137,6 +139,55 @@ public class AddmissionWithUniqueNumber {
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
 
+    }
+
+    @Then("user navigates to Bulk Delete section of Student Information module")
+    public void user_navigates_to_Bulk_Delete_section_of_Student_Information_module() {
+        homePage.bulkDelete.click();
+    }
+
+    @Then("user selects SDET option in class section in Bulk Delete module")
+    public void user_selects_SDET_option_in_class_section_in_Bulk_Delete_module() {
+        CommonUtils.waitForClickability(bulkDeletePage.classBulkDelete);
+        bulkDeletePage.classBulkDelete.click();
+
+    }
+
+    @Then("user selects API Testing option in Section of Bulk Delete module")
+    public void user_selects_API_Testing_option_in_Section_of_Bulk_Delete_module() {
+        CommonUtils.waitForClickability(bulkDeletePage.sectionBulkDelete);
+        bulkDeletePage.sectionBulkDelete.click();
+    }
+
+    @Then("user clicks on Search button")
+    public void user_clicks_on_Search_button() throws IOException {
+        bulkDeletePage.searchButton.click();
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
+
+    }
+
+    @Then("user selects student with unique admission number {string}")
+    public void user_selects_student_with_unique_admission_number(String uniqueAdmissionNumber) {
+        bulkDeletePage.bulkDeleteSectionDynamicXPATH(uniqueAdmissionNumber).click();
+
+    }
+
+    @Then("user clicks on Delete button")
+    public void user_clicks_on_Delete_button() throws InterruptedException {
+        bulkDeletePage.deleteButton.click();
+        Thread.sleep(3000);
+        CommonUtils.acceptAlert();
+
+    }
+
+    @Then("student with unique admission number {string} shall not be displayed on class List")
+    public void student_with_unique_admission_number_shall_not_be_displayed_on_class_List(String uniqueAdmissionNumber)
+            throws IOException {
+        Assert.assertFalse(bulkDeletePage.classList.getText().contentEquals(uniqueAdmissionNumber));
+        CommonUtils.waitForVisibility(bulkDeletePage.classList);
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
     }
 
 }

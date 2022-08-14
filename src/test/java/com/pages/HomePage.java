@@ -30,6 +30,8 @@ public class HomePage {
     public WebElement studentInformation;
     @FindBy(xpath = "//a[normalize-space()='Student Admission']")
     public WebElement studentAdmission;
+    @FindBy(xpath = "//a[normalize-space()='Bulk Delete']")
+    public WebElement bulkDelete;
 
     public HomePage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
