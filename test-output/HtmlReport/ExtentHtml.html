@@ -44,6 +44,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -53,7 +54,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 14, 2022 05:13:30 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Aug 14, 2022 08:34:47 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -69,6 +70,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -121,10 +123,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -135,10 +137,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> scenario(s) failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
@@ -151,10 +153,10 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>7</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='88.889%'><span class='strong'>8</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='11.111%'>1</span> scenario(s) failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
@@ -174,11 +176,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Student Admissions</span>
-						<span class='test-time'>Aug 14, 2022 05:13:33 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Aug 14, 2022 08:34:50 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -187,30 +189,30 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario outline node' test-id='2' status='pass'>
+<div class='scenario outline node' test-id='2' status='fail'>
 	<div class='category-list'>
 		<span class='category label'>@Progression</span>
 	</div>
-	<span class='duration right label'>0h 0m 18s+359ms</span>
+	<span class='duration right label'>0h 0m 25s+288ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Student Admissions</div>
-		<table class='runtime-table table-striped table'><tr><td>admissionNo</td><td>rollNumber</td><td>studentClass</td><td>section</td><td>firstName</td><td>lastName</td><td>gender</td><td>dateOfBirth</td><td>category</td><td>email</td><td>admissionDate</td><td>bloodGroup</td><td>asOfDate</td><td>mobileNumber</td><td>height</td><td>weight</td><td>fatherName</td><td>fatherPhone</td><td>fatherOccupation</td><td>motherName</td><td>motherPhone</td><td>motherOccupation</td><td>guardianName</td><td>guardianRelation</td><td>guardianEmail</td><td>guardianPhone</td><td>guardianOccupation</td><td>guardianAddress</td></tr><tr><td>123456</td><td>2468</td><td>SDET</td><td>Testing Fundamentals</td><td>Lauren</td><td>Flores</td><td>Female</td><td>10/12/1995</td><td>Testing sample</td><td>laurenflores23@hotmail.com</td><td>08/01/2022</td><td>A+</td><td>08/13/2022</td><td>703-875-9686</td><td>5'3</td><td>160</td><td>Leon</td><td>571-911-5874</td><td>Chef</td><td>Rosalia</td><td>703-968-5412</td><td>Chef</td><td>Rosalia</td><td>Mother</td><td>TestingEmail</td><td>703-985-8547</td><td>Chef</td><td>Testing Address Dr</td></tr></table>
+		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Student Admissions</div>
+		<table class='runtime-table table-striped table'><tr><td>admissionNo</td><td>rollNumber</td><td>studentClass</td><td>section</td><td>firstName</td><td>lastName</td><td>gender</td><td>dateOfBirth</td><td>category</td><td>email</td><td>admissionDate</td><td>bloodGroup</td><td>asOfDate</td><td>mobileNumber</td><td>height</td><td>weight</td><td>fatherName</td><td>fatherPhone</td><td>fatherOccupation</td><td>motherName</td><td>motherPhone</td><td>motherOccupation</td><td>guardianName</td><td>guardianRelation</td><td>guardianEmail</td><td>guardianPhone</td><td>guardianOccupation</td><td>guardianAddress</td></tr><tr><td>223456</td><td>2468</td><td>SDET</td><td>Testing Fundamentals</td><td>Lauren</td><td>Flores</td><td>Female</td><td>10/12/1995</td><td>Testing sample</td><td>laurenflores23@hotmail.com</td><td>08/01/2022</td><td>A+</td><td>08/13/2022</td><td>7038759686</td><td>5'3</td><td>160</td><td>Leon</td><td>571-911-5874</td><td>Chef</td><td>Rosalia</td><td>703-968-5412</td><td>Chef</td><td>Rosalia</td><td>Mother</td><td>TestingEmail</td><td>7039858547</td><td>Chef</td><td>Testing Address Dr</td></tr></table>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node scenario pass' status='pass'>
-			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Student Admissions</div>
+		<li test-id='3' class='node scenario fail' status='fail'>
+			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Student Admissions</div>
 			<ul class='gc steps'>
 				<li test-id='5' class='gc given pass' status='pass'>
 					<h6 class="step-name" title="LoginStepDef.a_teacher_or_admin_is_on_CTSMS_login_webpage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given a teacher or admin is on CTSMS login webpage</h6>
 					<ul class='screenshots right'>
-						<li><a data-featherlight="image" href="/Users/laurenflores/Desktop/Dreamers-Group-Two/test-output/screenshots/image_14082022_171335.png"><i class='material-icons'>panorama</i></a></li>
+						<li><a data-featherlight="image" href="/Users/laurenflores/Desktop/Dreamers-Group-Two/test-output/screenshots/image_14082022_203452.png"><i class='material-icons'>panorama</i></a></li>
 					</ul>
 					<div class="node-step"></div>
 				</li>
 				<li test-id='6' class='gc when pass' status='pass'>
 					<h6 class="step-name" title="LoginStepDef.a_teacher_or_admin_is_logging_in_with_username_and_password(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When a teacher or admin is logging in with username "general@teacher.com" and password "123456"</h6>
 					<ul class='screenshots right'>
-						<li><a data-featherlight="image" href="/Users/laurenflores/Desktop/Dreamers-Group-Two/test-output/screenshots/image_14082022_171336.png"><i class='material-icons'>panorama</i></a></li>
+						<li><a data-featherlight="image" href="/Users/laurenflores/Desktop/Dreamers-Group-Two/test-output/screenshots/image_14082022_203453.png"><i class='material-icons'>panorama</i></a></li>
 					</ul>
 					<div class="node-step"></div>
 				</li>
@@ -223,7 +225,7 @@
 					<div class="node-step"></div>
 				</li>
 				<li test-id='9' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="StudentAdmissionStepDef.a_teacher_or_admin_admits_student_with_the_information(String,String,String,String,String,String,String,String,String,String,String,String,String,String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And a teacher or admin admits student with the information "123456","2468","SDET","Testing Fundamentals","Lauren","Flores","Female","10/12/1995","Testing sample","laurenflores23@hotmail.com","08/01/2022","A+","08/13/2022","703-875-9686","5'3","160"</h6>
+					<h6 class="step-name" title="StudentAdmissionStepDef.a_teacher_or_admin_admits_student_with_the_information(String,String,String,String,String,String,String,String,String,String,String,String,String,String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And a teacher or admin admits student with the information "223456","2468","SDET","Testing Fundamentals","Lauren","Flores","Female","10/12/1995","Testing sample","laurenflores23@hotmail.com","08/01/2022","A+","08/13/2022","7038759686","5'3","160"</h6>
 					<div class="node-step"></div>
 				</li>
 				<li test-id='10' class='gc and pass' status='pass'>
@@ -231,8 +233,25 @@
 					<div class="node-step"></div>
 				</li>
 				<li test-id='11' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="StudentAdmissionStepDef.enters_guardian_information(String,String,String,String,String,String,String,String,String,String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And enters guardian information "Leon","571-911-5874","Chef", "Rosalia","703-968-5412","Chef","Rosalia","Mother","TestingEmail","703-985-8547","Chef","Testing Address Dr"</h6>
+					<h6 class="step-name" title="StudentAdmissionStepDef.enters_guardian_information(String,String,String,String,String,String,String,String,String,String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And enters guardian information "Leon","571-911-5874","Chef", "Rosalia","703-968-5412","Chef","Rosalia","Mother","TestingEmail","7039858547","Chef","Testing Address Dr"</h6>
 					<div class="node-step"></div>
+				</li>
+				<li test-id='12' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="StudentAdmissionStepDef.student_is_successfully_admitted_and_user_sees(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then student is successfully admitted and user sees "Record Saved Successfully"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='13' class='gc and fail' status='fail'>
+					<h6 class="step-name" title="StudentAdmissionStepDef.user_deletes_student_record_with_class_and_section_and_admission_no(String,String,String)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>And user deletes student record with class "<studentclass>" and section "Testing Fundamentals" and admission no "223456"</h6>
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Cannot locate option with text: <studentclass>
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'Diegos-MacBook-Pro-2.local', ip: '2600:8806:3204:da00:0:0:0:515%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.3', java.version: '11.0.15'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151)
+	at com.web.CommonUtils.selectDropDownValue(CommonUtils.java:84)
+	at com.stepDefinitions.StudentAdmissionStepDef.user_deletes_student_record_with_class_and_section_and_admission_no(StudentAdmissionStepDef.java:107)
+	at ✽.user deletes student record with class "<studentclass>" and section "Testing Fundamentals" and admission no "223456"(file:src/test/java/com/features/StudentAdmission.feature:13)
+</textarea>
 				</li>
 			</ul>
 		</li>
@@ -282,13 +301,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@Progression</span>
 						<span class='category-status right'>
-						<span class='label pass'>2</span>
+						<span class='label fail'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
 							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -302,14 +321,14 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 14, 2022 05:13:33 PM</td>
+										<td>Aug 14, 2022 08:34:50 PM</td>
 										<td class='linked' test-id='2'>Student Admissions</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Aug 14, 2022 05:13:33 PM</td>
+										<td>Aug 14, 2022 08:34:50 PM</td>
 										<td class='linked' test-id='3'>Student Admissions</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -325,7 +344,71 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Aug 14, 2022 08:35:11 PM</td>
+										<td class='linked' test-id='13'>And user deletes student record with class "<studentclass>" and section "Testing Fundamentals" and admission no "223456"</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Cannot locate option with text: <studentclass>
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'Diegos-MacBook-Pro-2.local', ip: '2600:8806:3204:da00:0:0:0:515%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.3', java.version: '11.0.15'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151)
+	at com.web.CommonUtils.selectDropDownValue(CommonUtils.java:84)
+	at com.stepDefinitions.StudentAdmissionStepDef.user_deletes_student_record_with_class_and_section_and_admission_no(StudentAdmissionStepDef.java:107)
+	at ✽.user deletes student record with class "<studentclass>" and section "Testing Fundamentals" and admission no "223456"(file:src/test/java/com/features/StudentAdmission.feature:13)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -345,25 +428,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>7</div>
+					<div class='panel-lead'>9</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 14, 2022 05:13:30 PM</div>
+					<div class='panel-lead'>Aug 14, 2022 08:34:47 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 14, 2022 05:13:51 PM</div>
+			 		<div class='panel-lead'>Aug 14, 2022 08:35:15 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 21s+238ms</div>
+					<div class='panel-lead'>0h 0m 28s+78ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -380,11 +463,11 @@
 						</tr>
 						<tr>
 							<td>@Progression</td>
+							<td>0</td>
 							<td>2</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 					</table>
@@ -399,38 +482,38 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				childCount: 1,
-				passChild: 1,
-				failChild: 0,
+				passChild: 0,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 0,
-				grandChildCount: 7,
-				passGrandChild: 7,
-				failGrandChild: 0,
+				exceptionsChild: 1,
+				grandChildCount: 9,
+				passGrandChild: 8,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
 				skipGrandChild: 0,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 1,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "Student Admissions":18.359
+			        "Student Admissions":25.288
 			};
 		</script>
 	
