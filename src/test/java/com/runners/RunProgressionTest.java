@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
         "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }, 
         features = "src/test/java/com/features", 
         glue = "com.stepDefinitions", 
-        tags = "@DRM24", 
+        tags = "Progression", 
         dryRun = false, 
         monochrome = true, 
         strict = true)

@@ -26,18 +26,22 @@ public class HomePage {
     /** Class section of Academics Module */
     @FindBy(xpath = "//a[normalize-space()='Class']")
     public WebElement classModule;
+    /** Student Information module */
     @FindBy(xpath = "//span[normalize-space()='Student Information']")
     public WebElement studentInformation;
+    /** Student Admission section of Student Information module */
     @FindBy(xpath = "//a[normalize-space()='Student Admission']")
     public WebElement studentAdmission;
+    /** Bulk Delete module of Student Information */
     @FindBy(xpath = "//a[normalize-space()='Bulk Delete']")
     public WebElement bulkDelete;
+    /** Sidebox Menu of the Home Page */
     @FindBy(xpath = "//section[@id='sibe-box']")
     public WebElement sideBox;
-
+    /** "Hamburger" button which expands Sidebox Menu */
     @FindBy(xpath = "//a[@role='button']")
     public WebElement sideBarButton;
-
+    /** Mobile version of Sidebox menu of the Home Page */
     @FindBy(xpath = "//ul[@class='sidebar-menu verttop']")
     public WebElement sideBoxMobile;
 
