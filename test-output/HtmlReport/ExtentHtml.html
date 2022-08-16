@@ -53,7 +53,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 15, 2022 09:51:52 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Aug 16, 2022 06:57:47 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -81,7 +81,7 @@
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
 					<li><a href='#'>@Vlad</a></li>
-					<li><a href='#'>@DRM24</a></li>
+					<li><a href='#'>@DRM2-18</a></li>
 					<li><a href='#'>@Smoke</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
@@ -137,7 +137,7 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
@@ -153,7 +153,7 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>6</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>18</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
@@ -178,8 +178,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>MOBILE - Navigation modules</span>
-						<span class='test-time'>Aug 15, 2022 09:52:00 PM</span>
+						<span class='test-name'>Adding and Deleting Classes</span>
+						<span class='test-time'>Aug 16, 2022 06:57:50 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -192,27 +192,27 @@
 <div class='scenario node' test-id='2' status='pass'>
 	<div class='category-list'>
 		<span class='category label'>@Vlad</span>
-		<span class='category label'>@DRM24</span>
+		<span class='category label'>@DRM2-18</span>
 		<span class='category label'>@Smoke</span>
 	</div>
-	<span class='duration right label'>0h 0m 14s+858ms</span>
+	<span class='duration right label'>0h 0m 22s+220ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Navigation modules to be displayed on portal (homepage)</div>
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: CTSMS - Adding Class</div>
 	</div>
 	<ul class='steps'>
 		<li test-id='4' class='node given pass' status='pass'>
-			<div class="step-name" title="IncomeModuleStepDef.user_is_on_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user is on login page</div>
+			<div class="step-name" title="AddAndDeleteClasses.user_is_one_the_CTSMS_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user is one the CTSMS login page</div>
 			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="/Users/vladgolub/Desktop/Dreamers-Group-Two/test-output/screenshots/image_15082022_215204.png"><i class='material-icons'>panorama</i></a></li>
+				<li><a data-featherlight="image" href="/Users/vladgolub/Desktop/Dreamers-Group-Two/test-output/screenshots/image_16082022_185752.png"><i class='material-icons'>panorama</i></a></li>
 			</ul>
 			<div class="node-step"></div>
 		</li>
 		<li test-id='5' class='node when pass' status='pass'>
-			<div class="step-name" title="AddmissionWithUniqueNumber.user_enters_username_in_the_Username(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enters "general@teacher.com" username in the Username</div>
+			<div class="step-name" title="AddAndDeleteClasses.user_enters_valid_username_in_the_Username_Box()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enters valid username in the Username Box</div>
 			<div class="node-step"></div>
 		</li>
 		<li test-id='6' class='node and pass' status='pass'>
-			<div class="step-name" title="AddmissionWithUniqueNumber.user_enters_password_in_the_Password(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user enters "123456" password in the Password</div>
+			<div class="step-name" title="AddAndDeleteClasses.user_enters_valid_password_in_the_Password_Box()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user enters valid password in the Password Box</div>
 			<div class="node-step"></div>
 		</li>
 		<li test-id='7' class='node and pass' status='pass'>
@@ -220,13 +220,86 @@
 			<div class="node-step"></div>
 		</li>
 		<li test-id='8' class='node and pass' status='pass'>
-			<div class="step-name" title="NavigationModuleMobile.user_clicks_on_side_bar_button_on_home_screen()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user clicks on side bar button on home screen</div>
+			<div class="step-name" title="AddAndDeleteClasses.navigates_to_Academics_module()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And navigates to Academics module</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='9' class='node then pass' status='pass'>
-			<div class="step-name" title="NavigationModuleMobile.the_side_box_displays_with_following_modules(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then the side box displays with following modules</div>
+		<li test-id='9' class='node and pass' status='pass'>
+			<div class="step-name" title="AddAndDeleteClasses.user_navigates_to_Class_section()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user navigates to Class section</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='10' class='node and pass' status='pass'>
+			<div class="step-name" title="AddAndDeleteClasses.user_adds_class(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user adds class "DREAMERS GROUP 2"</div>
 			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="/Users/vladgolub/Desktop/Dreamers-Group-Two/test-output/screenshots/image_15082022_215215.png"><i class='material-icons'>panorama</i></a></li>
+				<li><a data-featherlight="image" href="/Users/vladgolub/Desktop/Dreamers-Group-Two/test-output/screenshots/image_16082022_185809.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='11' class='node and pass' status='pass'>
+			<div class="step-name" title="AddAndDeleteClasses.user_clicks_on_CIA_Triad_section()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user clicks on CIA Triad section</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="/Users/vladgolub/Desktop/Dreamers-Group-Two/test-output/screenshots/image_16082022_185810.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='12' class='node and pass' status='pass'>
+			<div class="step-name" title="AddAndDeleteClasses.user_clicks_on_save_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user clicks on save button</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='13' class='node then pass' status='pass'>
+			<div class="step-name" title="AddAndDeleteClasses.class_has_to_be_appeared_in_Class_List_section(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then class "DREAMERS GROUP 2" has to be appeared in Class List section</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="/Users/vladgolub/Desktop/Dreamers-Group-Two/test-output/screenshots/image_16082022_185812.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='15' status='pass'>
+	<div class='category-list'>
+		<span class='category label'>@DRM2-18</span>
+		<span class='category label'>@Vlad</span>
+		<span class='category label'>@Smoke</span>
+	</div>
+	<span class='duration right label'>0h 0m 25s+527ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: CTSMS - Deleting Class</div>
+	</div>
+	<ul class='steps'>
+		<li test-id='17' class='node given pass' status='pass'>
+			<div class="step-name" title="AddAndDeleteClasses.user_is_one_the_CTSMS_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user is one the CTSMS login page</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="/Users/vladgolub/Desktop/Dreamers-Group-Two/test-output/screenshots/image_16082022_185817.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='18' class='node when pass' status='pass'>
+			<div class="step-name" title="AddAndDeleteClasses.user_enters_valid_username_in_the_Username_Box()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enters valid username in the Username Box</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='19' class='node and pass' status='pass'>
+			<div class="step-name" title="AddAndDeleteClasses.user_enters_valid_password_in_the_Password_Box()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user enters valid password in the Password Box</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='20' class='node and pass' status='pass'>
+			<div class="step-name" title="AddAndDeleteClasses.user_clicks_on_Sign_In_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user clicks on Sign In button</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='21' class='node and pass' status='pass'>
+			<div class="step-name" title="AddAndDeleteClasses.navigates_to_Academics_module()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And navigates to Academics module</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='22' class='node and pass' status='pass'>
+			<div class="step-name" title="AddAndDeleteClasses.user_navigates_to_Class_section()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user navigates to Class section</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='23' class='node and pass' status='pass'>
+			<div class="step-name" title="AddAndDeleteClasses.user_clicks_on_delete_option_of_class(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user clicks on delete option of class "DREAMERS GROUP 2"</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='24' class='node then pass' status='pass'>
+			<div class="step-name" title="AddAndDeleteClasses.class_has_to_be_deleted_from_Class_List_section(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then class "DREAMERS GROUP 2" has to be deleted from Class List section</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="/Users/vladgolub/Desktop/Dreamers-Group-Two/test-output/screenshots/image_16082022_185840.png"><i class='material-icons'>panorama</i></a></li>
 			</ul>
 			<div class="node-step"></div>
 		</li>
@@ -276,12 +349,12 @@
 					<div class='category-heading'>
 						<span class='category-name'>@Vlad</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label pass'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
 							
 							
 						</div>
@@ -296,8 +369,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 15, 2022 09:52:00 PM</td>
-										<td class='linked' test-id='2'>Navigation modules to be displayed on portal (homepage)</td>
+										<td>Aug 16, 2022 06:57:50 PM</td>
+										<td class='linked' test-id='2'>CTSMS - Adding Class</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 16, 2022 06:58:14 PM</td>
+										<td class='linked' test-id='15'>CTSMS - Deleting Class</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -307,14 +385,14 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@DRM24</span>
+						<span class='category-name'>@DRM2-18</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label pass'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
 							
 							
 						</div>
@@ -329,8 +407,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 15, 2022 09:52:00 PM</td>
-										<td class='linked' test-id='2'>Navigation modules to be displayed on portal (homepage)</td>
+										<td>Aug 16, 2022 06:57:50 PM</td>
+										<td class='linked' test-id='2'>CTSMS - Adding Class</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 16, 2022 06:58:14 PM</td>
+										<td class='linked' test-id='15'>CTSMS - Deleting Class</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -342,12 +425,12 @@
 					<div class='category-heading'>
 						<span class='category-name'>@Smoke</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label pass'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
 							
 							
 						</div>
@@ -362,8 +445,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 15, 2022 09:52:00 PM</td>
-										<td class='linked' test-id='2'>Navigation modules to be displayed on portal (homepage)</td>
+										<td>Aug 16, 2022 06:57:50 PM</td>
+										<td class='linked' test-id='2'>CTSMS - Adding Class</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 16, 2022 06:58:14 PM</td>
+										<td class='linked' test-id='15'>CTSMS - Deleting Class</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -394,31 +482,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>6</div>
+					<div class='panel-lead'>18</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 15, 2022 09:51:52 PM</div>
+					<div class='panel-lead'>Aug 16, 2022 06:57:47 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 15, 2022 09:52:16 PM</div>
+			 		<div class='panel-lead'>Aug 16, 2022 06:58:40 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 23s+723ms</div>
+					<div class='panel-lead'>0h 0m 53s+533ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -435,7 +523,7 @@
 						</tr>
 						<tr>
 							<td>@Vlad</td>
-							<td>1</td>
+							<td>2</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -443,8 +531,8 @@
 							</td>
 						</tr>
 						<tr>
-							<td>@DRM24</td>
-							<td>1</td>
+							<td>@DRM2-18</td>
+							<td>2</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -453,7 +541,7 @@
 						</tr>
 						<tr>
 							<td>@Smoke</td>
-							<td>1</td>
+							<td>2</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -479,8 +567,8 @@
 				warningParent: 0,
 				skipParent: 0,
 				exceptionsParent: 0,
-				childCount: 1,
-				passChild: 1,
+				childCount: 2,
+				passChild: 2,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -489,8 +577,8 @@
 				infoChild: 0,
 				debugChild: 0,
 				exceptionsChild: 0,
-				grandChildCount: 6,
-				passGrandChild: 6,
+				grandChildCount: 18,
+				passGrandChild: 18,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -503,7 +591,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "MOBILE - Navigation modules":14.858
+			        "Adding and Deleting Classes":49.529
 			};
 		</script>
 	

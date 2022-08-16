@@ -1,6 +1,6 @@
 Feature: Admission with unique number
 
-    @DRM2-13 @Smoke @Vlad
+    @DRM2-13 @Vlad @Smoke @Regression
     Scenario: CTSMS - Student Admission unique admission number
         Given user is on login page
         When user enters "general@teacher.com" username in the Username

@@ -55,23 +55,27 @@ public class AddAndDeleteClasses {
         loginPage.signInButton.click();
     }
 
-    /** Clicking on Academics Module */
+    /** Clicking on Academics Module 
+     * @throws InterruptedException*/
     @When("navigates to Academics module")
-    public void navigates_to_Academics_module() {
+    public void navigates_to_Academics_module() throws InterruptedException {
 
         homePage.academicsModule.click();
         /** Initiating a method that allows webpage fully loaded */
         CommonUtils.waitForVisibility(homePage.academicsModule);
+        Thread.sleep(3000);
     
 
     }
 
-    /** Navigating and clicking on Class Section */
+    /** Navigating and clicking on Class Section 
+     * @throws InterruptedException*/
     @When("user navigates to Class section")
-    public void user_navigates_to_Class_section() {
+    public void user_navigates_to_Class_section() throws InterruptedException {
         homePage.classModule.click();
         /** Initiating a method that allows webpage fully loaded */
         CommonUtils.waitForVisibility(homePage.classModule);
+        Thread.sleep(5000);
     }
 
     /** Adding the new class into Input TextBox */

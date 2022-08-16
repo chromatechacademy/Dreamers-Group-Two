@@ -1,6 +1,6 @@
 Feature: MOBILE - Navigation modules
 
-    @Vlad @DRM24 @Smoke
+    @Vlad @DRM24 @Smoke @Regression 
     Scenario: Navigation modules to be displayed on portal (homepage)
 
         Given user is on login page
