@@ -62,6 +62,7 @@ public class AddAndDeleteClasses {
         homePage.academicsModule.click();
         /** Initiating a method that allows webpage fully loaded */
         CommonUtils.waitForVisibility(homePage.academicsModule);
+    
 
     }
 

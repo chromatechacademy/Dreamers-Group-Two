@@ -32,6 +32,14 @@ public class HomePage {
     public WebElement studentAdmission;
     @FindBy(xpath = "//a[normalize-space()='Bulk Delete']")
     public WebElement bulkDelete;
+    @FindBy(xpath = "//section[@id='sibe-box']")
+    public WebElement sideBox;
+
+    @FindBy(xpath = "//a[@role='button']")
+    public WebElement sideBarButton;
+
+    @FindBy(xpath = "//ul[@class='sidebar-menu verttop']")
+    public WebElement sideBoxMobile;
 
     public HomePage() {
         PageFactory.initElements(WebDriverUtils.driver, this);

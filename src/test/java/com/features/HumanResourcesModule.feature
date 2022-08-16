@@ -4,7 +4,7 @@ Feature: Human Resource Menu
     # - Add Income
     # - Search Income
     # - Income Head
-    @DRM2-09
+    @DRM2-09 @Vlad @Smoke
     Scenario: Human Resources Menu Verification
         Given user is on loginpage
         When user enters valid username in Username textbox
