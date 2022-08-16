@@ -1,6 +1,6 @@
 Feature: Student Information Module
 
-@DRM-4
+@Smoke @regression @Elena @DRM-4
 Scenario: Verify Student Information module contains correct modules 
 Given a teacher or admin is on CTSMS login webpage
 When a teacher or admin is logging in with username "general@teacher.com" and password "123456"

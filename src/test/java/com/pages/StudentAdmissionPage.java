@@ -44,7 +44,7 @@ public class StudentAdmissionPage {
     @FindBy(xpath = "//input[@name='admission_date']")
     public WebElement admissionDateTextBox;
 
-    @FindBy(xpath = "//td[@class='day'][normalize-space()='1']" )
+    @FindBy(xpath = "//td[@class='day'][normalize-space()='1']")
     public WebElement admissionDateSelectElement;
 
     @FindBy(xpath = "//select[@name='blood_group']")
@@ -60,7 +60,7 @@ public class StudentAdmissionPage {
     public WebElement heightTextBox;
 
     @FindBy(xpath = "//*[@id='custom_fields[students][3]']")
-     public WebElement weightTextBox;
+    public WebElement weightTextBox;
 
     @FindBy(xpath = "//input[@value='mother']")
     public WebElement motherSelectionRadio;
@@ -97,7 +97,6 @@ public class StudentAdmissionPage {
 
     @FindBy(xpath = "//textarea[@name='guardian_address']")
     public WebElement guardianAddressTextBox;
-
 
     public StudentAdmissionPage() {
 

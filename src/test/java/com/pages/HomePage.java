@@ -19,6 +19,15 @@ public class HomePage {
     @FindBy(xpath = "//*[@id='sibe-box']/ul[2]/li[1]/ul[1]/li")
     public List<WebElement> studentInformationBox;
 
+    
+    // Academics Tab
+    @FindBy(xpath = "//span[normalize-space()='Academics']")
+    public WebElement AcademicsLink;
+
+    // Class sub Tab
+    @FindBy(xpath = "//a[normalize-space()='Class']")
+    public WebElement ClassLink;
+
     /* This method will get name of all student information sub tabs */
     public List<String> getStudentInformationMenu() {
         List<String> studentInformationMenuTabs = new ArrayList<>();
