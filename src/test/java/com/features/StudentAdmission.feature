@@ -1,6 +1,6 @@
 Feature: Student Admissions
 
-    @Progression
+    @CTSMS-12
     Scenario Outline: Student Admissions
         Given a teacher or admin is on CTSMS login webpage
         When a teacher or admin is logging in with username "general@teacher.com" and password "123456"
@@ -10,7 +10,7 @@ Feature: Student Admissions
         And selects Mother for guardian
         And enters guardian information "<fatherName>","<fatherPhone>","<fatherOccupation>", "<motherName>","<motherPhone>","<motherOccupation>","<guardianName>","<guardianRelation>","<guardianEmail>","<guardianPhone>","<guardianOccupation>","<guardianAddress>"
         Then student is successfully admitted and user sees "Record Saved Successfully"
-        And user deletes student record with class "<studentclass>" and section "<section>" and admission no "<admissionNo>"
+        And user deletes student record with class "<studentClass>" and section "<section>" and admission no "<admissionNo>"
 
         Examples:
             | admissionNo | rollNumber | studentClass | section              | firstName | lastName | gender | dateOfBirth | category       | email                      | admissionDate | bloodGroup | asOfDate   | mobileNumber | height | weight | fatherName | fatherPhone  | fatherOccupation | motherName | motherPhone  | motherOccupation | guardianName | guardianRelation | guardianEmail | guardianPhone | guardianOccupation | guardianAddress    |

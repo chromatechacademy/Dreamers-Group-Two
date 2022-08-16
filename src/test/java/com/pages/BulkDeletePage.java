@@ -39,7 +39,7 @@ public class BulkDeletePage {
     public WebElement searchButton;
 
     // Delete button
-
+    
     @FindBy(xpath = "//button[@id='load']")
 
     public WebElement deleteButton;

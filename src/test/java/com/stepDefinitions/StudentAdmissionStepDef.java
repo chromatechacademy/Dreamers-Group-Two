@@ -104,6 +104,7 @@ public class StudentAdmissionStepDef {
                 CommonUtils.waitForVisibility(bulkDeletePage.bulkDeleteLink);
                 bulkDeletePage.bulkDeleteLink.click();
                 Thread.sleep(3000);
+                CommonUtils.waitForVisibility(bulkDeletePage.classNameDropDown);
                 CommonUtils.selectDropDownValue(className, bulkDeletePage.classNameDropDown);
                 Thread.sleep(3000);
                 CommonUtils.selectDropDownValue(selectionName, bulkDeletePage.sectionNameDropDown);
