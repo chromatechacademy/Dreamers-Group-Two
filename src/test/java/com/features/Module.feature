@@ -1,6 +1,6 @@
 Feature: CTSMS Navigation Modules
 
-    @lauren
+    @Lauren @CTSMS-3 @Smoke
     Scenario: Navigation Modules
         Given a teacher or admin is on CTSMS login webpage
         When a teacher or admin is logging in with username "general@teacher.com" and password "123456"

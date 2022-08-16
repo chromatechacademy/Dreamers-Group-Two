@@ -2,12 +2,15 @@ package com.stepDefinitions;
 
 import static org.junit.Assert.assertTrue;
 
+import java.io.IOException;
+
 import org.junit.Assert;
 
 import com.pages.BulkDeletePage;
 import com.pages.HomePage;
 import com.pages.LoginPage;
 import com.pages.StudentAdmissionPage;
+import com.utils.CucumberLogUtils;
 import com.web.CommonUtils;
 import com.web.JavascriptUtils;
 
@@ -37,7 +40,7 @@ public class StudentAdmissionStepDef {
     public void a_teacher_or_admin_admits_student_with_the_information(String admissionNo, String rollNumber,
             String studentClass, String section, String firstName, String lastName, String gender, String dateOfBirth,
             String category, String email, String admissionDate, String bloodGroup, String asOfDate,
-            String mobileNUmber, String height, String weight) throws InterruptedException {
+            String mobileNUmber, String height, String weight) throws InterruptedException, IOException {
         studentAdmissionPage.admissionNoTextBox.sendKeys(admissionNo);
         studentAdmissionPage.rollNumberTextBox.sendKeys(rollNumber);
         CommonUtils.selectDropDownValue(studentClass, studentAdmissionPage.studentClass);
@@ -57,6 +60,8 @@ public class StudentAdmissionStepDef {
         studentAdmissionPage.mobileNumberTextBox.sendKeys(mobileNUmber);
         studentAdmissionPage.heightTextBox.sendKeys(height);
         studentAdmissionPage.weightTextBox.sendKeys(weight);
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
 
     }
 
@@ -71,7 +76,7 @@ public class StudentAdmissionStepDef {
             String motherName,
             String motherPhone, String motherOccupation, String guardianName, String guardianRelation,
             String guardianEmail, String guardianPhone,
-            String guardianOccupation, String guardianAddress) throws InterruptedException {
+            String guardianOccupation, String guardianAddress) throws InterruptedException, IOException {
 
         studentAdmissionPage.fatherNameTextBox.sendKeys(fatherName);
         studentAdmissionPage.fatherPhoneTextBox.sendKeys(fatherPhone);
@@ -87,6 +92,8 @@ public class StudentAdmissionStepDef {
         JavascriptUtils.scrollIntoView(studentAdmissionPage.saveButton);
         studentAdmissionPage.saveButton.click();
         Thread.sleep(5000);
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
 
     }
 
@@ -100,7 +107,7 @@ public class StudentAdmissionStepDef {
 
     @Then("user deletes student record with class {string} and section {string} and admission no {string}")
     public void user_deletes_student_record_with_class_and_section_and_admission_no(String className, String selectionName,
-            String admissionNo) throws InterruptedException {
+            String admissionNo) throws InterruptedException, IOException {
                 CommonUtils.waitForVisibility(bulkDeletePage.bulkDeleteLink);
                 bulkDeletePage.bulkDeleteLink.click();
                 Thread.sleep(3000);
@@ -114,7 +121,8 @@ public class StudentAdmissionStepDef {
                 bulkDeletePage.deleteButton.click();
                 CommonUtils.acceptAlert();
                 Thread.sleep(3000);
-                
+                CucumberLogUtils.logScreenShot();
+                CucumberLogUtils.logExtentScreenshot();
 
     }
 }

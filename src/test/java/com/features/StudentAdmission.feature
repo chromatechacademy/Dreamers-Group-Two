@@ -1,6 +1,6 @@
 Feature: Student Admissions
 
-    @CTSMS-12
+    @Lauren @DRM-12 @Smoke
     Scenario Outline: Student Admissions
         Given a teacher or admin is on CTSMS login webpage
         When a teacher or admin is logging in with username "general@teacher.com" and password "123456"
