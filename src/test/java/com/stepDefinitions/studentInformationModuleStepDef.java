@@ -1,5 +1,6 @@
 package com.stepDefinitions;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.testng.Assert;
@@ -25,9 +26,10 @@ public class studentInformationModuleStepDef {
     }
 
     @Then("a teacher or admin can see the following menu")
-    public void a_teacher_or_admin_can_see_the_following_menu(DataTable studentInformationMenu) {
+    public void a_teacher_or_admin_can_see_the_following_menu(DataTable studentInformationMenu) throws IOException {
         List<String> expectedModules = studentInformationMenu.asList();
         List<String> actualModules = homePage.getStudentInformationMenu();
         Assert.assertEquals(actualModules, expectedModules);
+        CucumberLogUtils.logExtentScreenshot();
     }
 }
