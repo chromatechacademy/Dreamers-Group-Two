@@ -1,5 +1,8 @@
 package com.stepDefinitions;
 
+import java.io.IOException;
+import java.io.InterruptedIOException;
+
 import org.testng.Assert;
 
 import com.constants.ApplicationConstants;
@@ -24,17 +27,17 @@ public class InvalidCredentialsLoginStepDef {
 
     @When("a user enters invalid credentials such as username {string} and password {string}")
     public void a_user_enters_invaalid_credentials_such_as_username_and_password(String string, String string2)
-            throws InterruptedException {
+            throws InterruptedException, IOException {
         loginPage.usernameTextBox.sendKeys("test@testmail.com");
         loginPage.passwordTextBox.sendKeys("Happy123!");
+        CucumberLogUtils.logExtentScreenshot();
         loginPage.signInButton.click();
     }
 
     @Then("a user should see message {string}")
-    public void a_user_should_see_message(String expectedPageTitle) {
+    public void a_user_should_see_message(String expectedPageTitle) throws IOException {
         String actualPageTitle = loginPage.invalidUsernameOrPasswordMessage.getText();
         Assert.assertTrue(expectedPageTitle.contentEquals(actualPageTitle));
-        CucumberLogUtils.logScreenShot();
-
+        CucumberLogUtils.logExtentScreenshot();
     }
 }

@@ -56,12 +56,14 @@ public class StudentAdmissionStepDef {
     @When("selects Mother for guardian")
     public void selects_Mother_for_guardian() {
         studentAdmissionPage.motherSelectionRadio.click();
-        
+
     }
 
     @When("enters guardian information {string},{string},{string}, {string},{string},{string},{string},{string},{string},{string},{string},{string}")
-    public void enters_guardian_information(String fatherName, String fatherPhone, String fatherOccupation, String motherName,
-            String motherPhone, String motherOccupation, String guardianName, String guardianRelation, String guardianEmail, String guardianPhone,
+    public void enters_guardian_information(String fatherName, String fatherPhone, String fatherOccupation,
+            String motherName,
+            String motherPhone, String motherOccupation, String guardianName, String guardianRelation,
+            String guardianEmail, String guardianPhone,
             String guardianOccupation, String guardianAddress) throws InterruptedException {
 
         studentAdmissionPage.fatherNameTextBox.sendKeys(fatherName);

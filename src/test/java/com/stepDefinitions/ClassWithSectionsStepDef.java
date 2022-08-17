@@ -9,7 +9,6 @@ public class ClassWithSectionsStepDef {
 
     ClassPage classPage = new ClassPage();
 
-
     @When("a teacher or admin clicks on Academics tab on the left vertical sections")
     public void a_teacher_or_admin_clicks_on_Academics_tab_on_the_left_vertical_sections() {
 
