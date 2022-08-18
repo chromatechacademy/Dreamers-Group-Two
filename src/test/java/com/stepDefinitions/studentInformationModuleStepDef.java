@@ -12,8 +12,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
 
-public class studentInformationModuleStepDef {
-
+public class studentInformationModuleStepDef{
     HomePage homePage = new HomePage();
 
     @When("a teacher or admin clicks on Student Information menu on the left navigation section")

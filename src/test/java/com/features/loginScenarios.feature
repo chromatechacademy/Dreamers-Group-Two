@@ -1,6 +1,6 @@
 Feature: Login Scenarios
 
-@Smoke @Regression @DRM-1
+@Smoke @Regression @DRM-1 @Lauren
 
 Scenario: Login with valid credentials
 Given a teacher or admin is on CTSMS login webpage
