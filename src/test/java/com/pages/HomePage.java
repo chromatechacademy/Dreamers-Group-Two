@@ -2,6 +2,7 @@ package com.pages;
 
 import java.util.List;
 
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.web.WebDriverUtils;
 
 public class HomePage {
+
 
     //Student Information
     @FindBy(xpath = "//span[normalize-space()='Student Information']")
@@ -44,8 +46,40 @@ public class HomePage {
 
    
 
-public HomePage() {
+   
+    /** Dropdown menu in Income Module */
+    @FindBy(xpath = "//ul[@class='treeview-menu menu-open']")
+    public WebElement incomeModuleMenu;
+    
+    /** Dropdown Menu in Human Resourse Module */
+    @FindBy(xpath = "//ul[@class='treeview-menu menu-open']")
+    public WebElement humanResourceModuleMenu;
+   
+    /** Class section of Academics Module */
+    @FindBy(xpath = "//a[normalize-space()='Class']")
+    public WebElement classModule;
+    /** Student Information module */
+    @FindBy(xpath = "//span[normalize-space()='Student Information']")
+    public WebElement studentInformation;
+    /** Student Admission section of Student Information module */
+    @FindBy(xpath = "//a[normalize-space()='Student Admission']")
+    public WebElement studentAdmission;
+    /** Bulk Delete module of Student Information */
+    @FindBy(xpath = "//a[normalize-space()='Bulk Delete']")
+    public WebElement bulkDelete;
+    /** Sidebox Menu of the Home Page */
+    @FindBy(xpath = "//section[@id='sibe-box']")
+    public WebElement sideBox;
+    /** "Hamburger" button which expands Sidebox Menu */
+    @FindBy(xpath = "//a[@role='button']")
+    public WebElement sideBarButton;
+    /** Mobile version of Sidebox menu of the Home Page */
+    @FindBy(xpath = "//ul[@class='sidebar-menu verttop']")
+    public WebElement sideBoxMobile;
 
+    public HomePage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
+
+
 }
