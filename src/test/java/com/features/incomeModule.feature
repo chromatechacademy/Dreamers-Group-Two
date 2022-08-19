@@ -6,7 +6,7 @@ Feature: Income Module
     # - Add Income
     # - Search Income
     # - Income Head
-    @DRM2-06
+    @DRM2-06 @Vlad @Smoke @Regression
     Scenario: Income Module Assertion
         Given user is on login page
         When user enters valid username in Username box
