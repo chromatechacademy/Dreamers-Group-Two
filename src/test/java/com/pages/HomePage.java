@@ -29,10 +29,14 @@ public class HomePage {
      @FindBy(xpath = "//*[contains(text(), ' Add Homework')]")
      public WebElement addHomeWorkButton; 
 
+     @FindBy(xpath = "//span[normalize-space()='Student Information']")
+     public WebElement studentInformationButton; 
+
+     @FindBy(xpath = "//*[contains(text(), ' Student Details')]")
+     public WebElement studentDetailsButton; 
+
      
 
-
-    
 
 
 
