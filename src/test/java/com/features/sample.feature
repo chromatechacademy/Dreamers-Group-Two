@@ -7,10 +7,12 @@ Feature: Sample
     #WRITE YOUR SCENARIOS IN THIRD PERSON POINT OF VIEW(THE USERS POINT OF VIEW - NOT YOURS)
     @SampleRun
     Scenario: Sample scenario
-        Given this step can be used to specify a pre-condition
-        # When an action is made
-        # Then this is where you write the expected result
-        # And you can use this wherever needed to make your scenario make sense
+       Given a teacher or admin is on CTSMS login webpage
+       When a teacher or admin is logging in with username "general@teacher.com" and password "123456"
+       And User clicks fees collection 
+       And User clicks search due fees
+       And User selects fees group "10"
+    
 
     #USE SCENARIOS/SCENARIO OUTLINES TO HARDCODE
     Scenario: Example of hardcoding in scenario

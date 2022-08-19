@@ -15,7 +15,7 @@ Feature: Adding and Deleting Classes
         Then class "DREAMERS GROUP 2" has to be appeared in Class List section
 
 
-  @Vlad @DRM2-18 @Progression
+  @Vlad @DRM2-18 
     Scenario: CTSMS - Deleting Class
         Given user is one the CTSMS login page
         When user enters valid username in the Username Box 

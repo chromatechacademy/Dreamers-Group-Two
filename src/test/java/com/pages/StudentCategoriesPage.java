@@ -14,6 +14,12 @@ public class StudentCategoriesPage {
     @FindBy(xpath = "//*[contains(text(),'Selenium')]")
     public WebElement studentCategoryAdded; 
 
+    @FindBy(xpath = "//td[contains(text(), 'Selenium')]/following-sibling::*/following-sibling::*/a[2]")
+    public WebElement studentCategoryDelete;
+
+    @FindBy(xpath = "//*[contains(text(),'Record Delete Successfully')]")
+    public WebElement deleteSuccessfulMsg; 
+
 
     public StudentCategoriesPage(){
         PageFactory.initElements(WebDriverUtils.driver, this); 

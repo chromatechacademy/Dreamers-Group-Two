@@ -59,6 +59,12 @@ public class AddAndDeleteClasses {
     @When("navigates to Academics module")
     public void navigates_to_Academics_module() {
 
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         homePage.academicsModule.click();
         /** Initiating a method that allows webpage fully loaded */
         CommonUtils.waitForVisibility(homePage.academicsModule);
