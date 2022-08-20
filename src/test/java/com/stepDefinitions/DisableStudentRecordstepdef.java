@@ -1,8 +1,5 @@
 package com.stepDefinitions;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-
 import com.constants.ApplicationConstants;
 import com.pages.HomePage;
 import com.pages.LoginPage;
@@ -19,9 +16,7 @@ public class DisableStudentRecordstepdef {
     HomePage homePage = new HomePage();
     SelectCriteriaPage selectCriteriaPage = new SelectCriteriaPage();
     WebDriverUtils driver = new WebDriverUtils();
-
-
-   
+    
 
     @Given("User is on the home page")
     public void user_is_on_the_home_page() {
@@ -41,29 +36,46 @@ public class DisableStudentRecordstepdef {
     }
 
     @Given("User selects {string} in Class Name and {string} section name")
-    public void user_selects_in_Class_Name_and_section_name(String SDET, String Testing) throws InterruptedException  {
-   CommonUtils.selectDropDownValue(SDET, selectCriteriaPage.classDropDown);
- Thread.sleep(2000);
- CommonUtils.selectDropDownValue(Testing, selectCriteriaPage.sectionDropDown);
- 
-
- 
-
-    } 
-    @Given("User clicks on {string}")
-    public void user_clicks_on(String string) {
+    public void user_selects_in_Class_Name_and_section_name(String SDET, String String) throws InterruptedException {
+        CommonUtils.selectDropDownValue(SDET, selectCriteriaPage.classDropDown);
+        Thread.sleep(1000);
+        CommonUtils.selectDropDownValue(selectCriteriaPage.sectionDropDown, "15");
+        CommonUtils.waitForClickability(selectCriteriaPage.leftSearchButton);
     }
+
+    @Given("User Clicks on Seatch Button")
+    public void user_Clicks_on_Seatch_Button() throws InterruptedException {
+        // CommonUtils.waitForClickability(selectCriteriaPage.leftSearchButton);
+        selectCriteriaPage.leftSearchButton.click();
+        // Thread.sleep(3000);
+    }
+
+    @Given("User clicks on {string}")
+    public void user_clicks_on(String string) throws InterruptedException {
+        selectCriteriaPage.student.click();
+        //Thread.sleep(3000);
+    }
+
+    
 
     @When("User clicks on disable button in the top right")
     public void user_clicks_on_disable_button_in_the_top_right() {
+        selectCriteriaPage.disableButton.click();
+         CommonUtils.acceptAlert();
+         
+        
     }
 
     @Then("User selects {string} Reason from the drop down and hits save")
-    public void user_selects_Reason_from_the_drop_down_and_hits_save(String string) {
+    public void user_selects_Reason_from_the_drop_down_and_hits_save(String string) throws InterruptedException {
+        CommonUtils.selectDropDownValue(string, selectCriteriaPage.reasonDropDown);
+        selectCriteriaPage.dissableStudentSaveButton.click();
+        Thread.sleep(3000);
     }
 
     @Then("Student is deleted")
     public void student_is_deleted() {
+        
 
     }
 
