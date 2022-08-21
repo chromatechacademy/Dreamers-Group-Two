@@ -17,6 +17,9 @@ public class StudentAdmissionPage {
     @FindBy(xpath = "//input[@name='admission_no']")
     public WebElement admissionNoTextBox;
 
+    /** Student details link */
+    @FindBy(xpath = "//ul[@class='treeview-menu']//a[normalize-space()='Student Details']")
+    public WebElement studentDetails;
 
     //Roll Number text 
     @FindBy(xpath = "//input[@name='roll_no']")
@@ -137,9 +140,6 @@ public class StudentAdmissionPage {
     @FindBy(xpath = "//div[@class='alert alert-success']")
     public WebElement successMessage;
 
-    
-
-
     /** Andmission No textbox */
     @FindBy(xpath = "//input[@id='admission_no']")
     public WebElement admissionNumber;
@@ -167,6 +167,7 @@ public class StudentAdmissionPage {
     /** Guardian Phone Number textbox */
     @FindBy(xpath = "//input[@id='guardian_phone']")
     public WebElement guardianPhoneNumber;
+
    
     /**
      * The warning message below Admission No textbox. Appears only if entering the

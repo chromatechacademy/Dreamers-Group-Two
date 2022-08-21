@@ -2,7 +2,6 @@ package com.pages;
 
 import java.util.List;
 
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,50 +10,50 @@ import com.web.WebDriverUtils;
 
 public class HomePage {
 
-
-    //Student Information
+    // Student Information
     @FindBy(xpath = "//span[normalize-space()='Student Information']")
     public WebElement studentInformationLink;
 
-    //Fees Collection
+    // Fees Collection
     @FindBy(xpath = "//span[normalize-space()='Fees Collection']")
     public WebElement feesCollectionModule;
 
-    //Income 
+    // Income
     @FindBy(xpath = "//span[normalize-space()='Income']")
     public WebElement incomeModule;
 
-    //Expenses
+    // Expenses
     @FindBy(xpath = "//span[normalize-space()='Expenses']")
     public WebElement expensesModule;
 
-    //Academics
+    // Academics
     @FindBy(xpath = "//span[normalize-space()='Academics']")
     public WebElement academicsModule;
 
-    //Human Resources
+    // Academics dropdown menu
+    @FindBy(xpath = "//ul[@class='treeview-menu menu-open']")
+    public WebElement academicsModuleMenu;
+
+    // Human Resources
     @FindBy(xpath = "//span[normalize-space()='Human Resource']")
     public WebElement humanResourceModule;
 
-    //Homework
+    // Homework
     @FindBy(xpath = "//span[normalize-space()='Homework']")
     public WebElement homeWorkModule;
 
-    //Reports
+    // Reports
     @FindBy(xpath = "//span[normalize-space()='Reports']")
     public WebElement reportsModule;
 
-   
-
-   
     /** Dropdown menu in Income Module */
     @FindBy(xpath = "//ul[@class='treeview-menu menu-open']")
     public WebElement incomeModuleMenu;
-    
+
     /** Dropdown Menu in Human Resourse Module */
     @FindBy(xpath = "//ul[@class='treeview-menu menu-open']")
     public WebElement humanResourceModuleMenu;
-   
+
     /** Class section of Academics Module */
     @FindBy(xpath = "//a[normalize-space()='Class']")
     public WebElement classModule;
@@ -80,6 +79,5 @@ public class HomePage {
     public HomePage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
-
 
 }
