@@ -57,20 +57,23 @@ public class EnableStudentAfterDisablingStepDef {
         CucumberLogUtils.logScreenShot();
     }
 
-    // *Search Student We have just created */
+    // *Search Student We have just created by admission number*/
     @When("a teacher or admin clicks on Student Details")
     public void a_teacher_or_admin_clicks_on_Student_Details() {
         homePage.studentDetails.click();
     }
 
     @When("a teacher or admin searches by keyword {string}")
-    public void a_teacher_or_admin_searches_by_keyword(String keyword) throws InterruptedException {
+    public void a_teacher_or_admin_searches_by_keyword(String keyword) throws InterruptedException, IOException {
         studentDetailsPage.SearchByKeywordTextBox.sendKeys(keyword);
         studentDetailsPage.SearchByKeyWordButton.click();
         Thread.sleep(1000);
 
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
     }
 
+    // *Disabling the Student */
     @Then("a teacher or admin clicks on Student Name")
     public void a_teacher_or_admin_clicks_on_Student_Name() throws InterruptedException {
         studentDetailsPage.StudentLink.click();
@@ -79,10 +82,14 @@ public class EnableStudentAfterDisablingStepDef {
     }
 
     @Then("a teacher or admin disables the Student Record")
-    public void a_teacher_or_admin_disables_the_Student_Record() throws InterruptedException {
+    public void a_teacher_or_admin_disables_the_Student_Record() throws InterruptedException,IOException {
         studentDetailsPage.DisableRedButton.click();
         Thread.sleep(1000);
         CommonUtils.acceptAlert();
+
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
+
         Thread.sleep(1000);
         CommonUtils.selectDropDownValue("Very Loud", studentDetailsPage.DropDownReason);
         Thread.sleep(1000);
@@ -90,12 +97,18 @@ public class EnableStudentAfterDisablingStepDef {
         Thread.sleep(1000);
     }
 
+    // *The Student is disabled and has a Disabled reason */
     @Then("Disable Reason is displayed on the Student Record")
-    public void disable_Reason_is_displayed_on_the_Student_Record() {
+    public void disable_Reason_is_displayed_on_the_Student_Record() throws InterruptedException, IOException {
         Assert.assertTrue(studentDetailsPage.DisableReasonText.isDisplayed());
+        Thread.sleep(2000);
+
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
 
     }
 
+    // *Search the disabled student */
     @When("a teacher or admin clicks on Disabled Students")
     public void a_teacher_or_admin_clicks_on_Disabled_Students() {
         homePage.DisabledStudentLink.click();
@@ -104,10 +117,13 @@ public class EnableStudentAfterDisablingStepDef {
 
     @When("a teacher or admin searches by keyword {string} on Disabled Student Page")
     public void a_teacher_or_admin_searches_by_keyword_on_Disabled_Student_Page(String keyword)
-            throws InterruptedException {
+            throws InterruptedException, IOException {
         disabledStudentPage.SearchBoxByKeyword.sendKeys(keyword);
         disabledStudentPage.SearchButtonByKeyword.click();
         Thread.sleep(1000);
+
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
 
     }
 
@@ -118,19 +134,25 @@ public class EnableStudentAfterDisablingStepDef {
     }
 
     @Then("a teacher or admin enables the Student Record")
-    public void a_teacher_or_admin_enables_the_Student_Record() throws InterruptedException {
+    public void a_teacher_or_admin_enables_the_Student_Record() throws InterruptedException, IOException {
         disabledStudentPage.EnableGreenButton.click();
         CommonUtils.acceptAlert();
         Thread.sleep(1000);
+
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
     }
 
     @Then("enabled student {string} is displayed on the Student Details page")
-    public void enabled_student_is_displayed_on_the_Student_Details_page(String keyword) throws InterruptedException {
+    public void enabled_student_is_displayed_on_the_Student_Details_page(String keyword)
+            throws InterruptedException, IOException {
         homePage.studentDetails.click();
         studentDetailsPage.SearchByKeywordTextBox.sendKeys(keyword);
         studentDetailsPage.SearchByKeyWordButton.click();
         Thread.sleep(1000);
         Assert.assertTrue(studentDetailsPage.EnabledStudentExist.isDisplayed());
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
     }
 
 }

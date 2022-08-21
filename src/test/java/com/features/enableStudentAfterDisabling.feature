@@ -4,7 +4,7 @@ Feature: Ability to enable student records after disabling
         When a teacher or admin is logging in with username "general@teacher.com" and password "123456"
         And a teacher or admin clicks on Student Information
 
-    @Smoke @Regression @Elena @DRM-16 @Progression2
+    @Smoke @Regression @Elena @DRM-16 
 
     Scenario Outline: Adding New Student
         And a teacher or admin clicks on Student Admissions
@@ -17,7 +17,7 @@ Feature: Ability to enable student records after disabling
             | admissionNo | student_class | section     | firstName | lastName | gender | dateOfBirth | guardianName | guardianPhone |
             | 25031989    | SDET          | API Testing | Elena     | Ivanova  | Female | 01/01/2000  | Mom          | 000-111-1234  |
 
-    @Smoke @Regression @Elena @DRM-16 @Progression2
+    @Smoke @Regression @Elena @DRM-16 
     Scenario: Student to be disabled
         And a teacher or admin clicks on Student Details
         And a teacher or admin searches by keyword "25031989"
@@ -25,7 +25,7 @@ Feature: Ability to enable student records after disabling
         And a teacher or admin disables the Student Record
         Then Disable Reason is displayed on the Student Record
 
-    @Smoke @Regression @Elena @DRM-16 @Progression2
+    @Smoke @Regression @Elena @DRM-16
     Scenario: Student to be enabled
         And a teacher or admin clicks on Disabled Students
         And a teacher or admin searches by keyword "25031989" on Disabled Student Page
@@ -33,7 +33,7 @@ Feature: Ability to enable student records after disabling
         And a teacher or admin enables the Student Record
         Then enabled student "25031989" is displayed on the Student Details page
 
-    @Smoke @Regression @Elena @DRM-16 @Progression2
+    @Smoke @Regression @Elena @DRM-16 
     Scenario: Student to be deleted
         And user navigates to Bulk Delete section of Student Information module
         And user selects SDET option in class section in Bulk Delete module
