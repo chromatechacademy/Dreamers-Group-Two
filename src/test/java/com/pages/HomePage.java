@@ -35,6 +35,10 @@ public class HomePage {
      @FindBy(xpath = "//*[contains(text(), ' Student Details')]")
      public WebElement studentDetailsButton; 
 
+     @FindBy(xpath = "//*[contains(text(), ' Disabled Students')]")
+     public WebElement disabledStudentsButton;
+     ; 
+     
      
 
 

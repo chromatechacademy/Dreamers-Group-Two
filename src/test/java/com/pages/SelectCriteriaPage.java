@@ -18,7 +18,7 @@ public class SelectCriteriaPage {
     public WebElement leftSearchButton;
 
 
-    @FindBy(xpath = "//*[contains(text(),'Bad Student')]")
+    @FindBy(xpath = "//*[contains(text(),'Bad Student ')]")
     public WebElement student;
 
     @FindBy(xpath = "//i[@class='fa fa-thumbs-o-down']")
@@ -30,7 +30,14 @@ public class SelectCriteriaPage {
      @FindBy(css = "body > div:nth-child(2) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > form:nth-child(2) > div:nth-child(2) > div:nth-child(1) > button:nth-child(1)")
     public WebElement dissableStudentSaveButton;
 
+    @FindBy(xpath = "//textarea[@name='note']")
+    public WebElement notesBox;
 
+
+    
+
+    
+    
     public SelectCriteriaPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }

@@ -53,7 +53,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 20, 2022 12:59:15 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Aug 21, 2022 05:40:10 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -69,6 +69,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -80,6 +81,7 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@Regression</a></li>
 					<li><a href='#'>@DRM-15</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
@@ -121,10 +123,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> skipped
                 </div>
             </div>
         </div>
@@ -135,12 +137,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>2</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>0</span> others
                 </div>
             </div>
         </div>
@@ -151,12 +153,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>8</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='6.25%'><span class='strong'>1</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='93.75%'>15</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='93.75%'>0</span> others
                 </div>
             </div>
         </div>
@@ -174,11 +176,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf skip' status='skip' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Disable Student Record</span>
-						<span class='test-time'>Aug 20, 2022 12:59:18 AM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Aug 21, 2022 05:40:10 PM</span>
+						<span class='test-status right skip'>skip</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -187,46 +189,90 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario node' test-id='2' status='pass'>
+<div class='scenario node' test-id='2' status='skip'>
 	<div class='category-list'>
+		<span class='category label'>@Regression</span>
 		<span class='category label'>@DRM-15</span>
 	</div>
-	<span class='duration right label'>0h 0m 8s+657ms</span>
+	<span class='duration right label'>0h 0m 0s+34ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: User disables student record</div>
+		<div class="scenario-name"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span> Scenario: User Disables Student Record</div>
 	</div>
 	<ul class='steps'>
-		<li test-id='4' class='node given pass' status='pass'>
-			<div class="step-name" title="DisableStudentRecordstepdef.user_is_on_the_home_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User is on the home page</div>
-			<div class="node-step"></div>
+		<li test-id='3' class='node * skip' status='skip'>
+			<div class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Hooks.start(Scenario)</div>
+			<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='5' class='node and pass' status='pass'>
-			<div class="step-name" title="DisableStudentRecordstepdef.user_clicks_on_Student_Details_inside_student_Information_Module()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User clicks on Student Details inside student Information Module</div>
-			<div class="node-step"></div>
+		<li test-id='4' class='node given skip' status='skip'>
+			<div class="step-name" title="Disb_Stdnt_Rcrds_stepdef.user_is_on_the_home_page()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given User is on the home page</div>
+			<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='6' class='node and pass' status='pass'>
-			<div class="step-name" title="DisableStudentRecordstepdef.user_selects_in_Class_Name_and_section_name(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User selects "SDET" in Class Name and "Git/GitHub" section name</div>
-			<div class="node-step"></div>
+		<li test-id='5' class='node and skip' status='skip'>
+			<div class="step-name" title="Disb_Stdnt_Rcrds_stepdef.user_clicks_on_Student_Details_inside_student_Information_Module()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And User clicks on Student Details inside student Information Module</div>
+			<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='7' class='node and pass' status='pass'>
-			<div class="step-name" title="DisableStudentRecordstepdef.user_Clicks_on_Seatch_Button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User Clicks on Seatch Button</div>
-			<div class="node-step"></div>
+		<li test-id='6' class='node and skip' status='skip'>
+			<div class="step-name" title="Disb_Stdnt_Rcrds_stepdef.user_selects_in_Class_Name_and_section_name(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And User selects "SDET" in Class Name and "Git/GitHub" section name</div>
+			<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='8' class='node and pass' status='pass'>
-			<div class="step-name" title="DisableStudentRecordstepdef.user_clicks_on(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User clicks on "Bad Student"</div>
-			<div class="node-step"></div>
+		<li test-id='7' class='node and skip' status='skip'>
+			<div class="step-name" title="Disb_Stdnt_Rcrds_stepdef.user_Clicks_on_Search_Button()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And User Clicks on Search Button</div>
+			<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='9' class='node when pass' status='pass'>
-			<div class="step-name" title="DisableStudentRecordstepdef.user_clicks_on_disable_button_in_the_top_right()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When User clicks on disable button in the top right</div>
-			<div class="node-step"></div>
+		<li test-id='8' class='node and skip' status='skip'>
+			<div class="step-name" title="Disb_Stdnt_Rcrds_stepdef.user_clicks_on(String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And User clicks on "Bad Student"</div>
+			<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='10' class='node then pass' status='pass'>
-			<div class="step-name" title="DisableStudentRecordstepdef.user_selects_Reason_from_the_drop_down_and_hits_save(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User selects "Very Loud" Reason from the drop down and hits save</div>
-			<div class="node-step"></div>
+		<li test-id='9' class='node when skip' status='skip'>
+			<div class="step-name" title="Disb_Stdnt_Rcrds_stepdef.user_clicks_on_disable_button_in_the_top_right()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When User clicks on disable button in the top right</div>
+			<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='10' class='node then skip' status='skip'>
+			<div class="step-name" title="Disb_Stdnt_Rcrds_stepdef.user_selects_Reason_from_the_drop_down_and_enter_reason_notes_as_and_hits_save(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then User selects "Very Loud" Reason from the drop down and enter reason notes as "Very Annoying" and hits save</div>
+			<div class="node-step">Step skipped</div>
 		</li>
 		<li test-id='11' class='node then pass' status='pass'>
-			<div class="step-name" title="DisableStudentRecordstepdef.student_is_deleted()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Student is deleted</div>
-			<div class="node-step"></div>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Student is diasbled</div>
+		</li>
+		<li test-id='12' class='node * skip' status='skip'>
+			<div class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Hooks.end(Scenario)</div>
+			<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='13' status='skip'>
+	<div class='category-list'>
+		<span class='category label'>@Regression</span>
+		<span class='category label'>@DRM-15</span>
+	</div>
+	<span class='duration right label'>0h 0m 0s+1ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span> Scenario: User Confirms Student Record is Disabled</div>
+	</div>
+	<ul class='steps'>
+		<li test-id='14' class='node * skip' status='skip'>
+			<div class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Hooks.start(Scenario)</div>
+			<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='15' class='node given skip' status='skip'>
+			<div class="step-name" title="Conf_Disb_Stdnt_Rcrds_stepdef.user_clicks_on_Disabled_Student_Button_inside_Student_Information_Module()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given User clicks on Disabled Student Button inside Student Information Module</div>
+			<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='16' class='node and skip' status='skip'>
+			<div class="step-name" title="Conf_Disb_Stdnt_Rcrds_stepdef.user_Selects_in_Class_Name_and_section_name(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And User Selects "SDET" in Class Name and "Git/GitHub" section name</div>
+			<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='17' class='node and skip' status='skip'>
+			<div class="step-name" title="Conf_Disb_Stdnt_Rcrds_stepdef.user_Clicks_on_search_Button()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And User Clicks on search Button</div>
+			<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='18' class='node then skip' status='skip'>
+			<div class="step-name" title="Conf_Disb_Stdnt_Rcrds_stepdef.is_visible_as_diasbled(String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then "Bad Student " is visible as diasbled</div>
+			<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='19' class='node * skip' status='skip'>
+			<div class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Hooks.end(Scenario)</div>
+			<div class="node-step">Step skipped</div>
 		</li>
 	</ul>
 </div>
@@ -272,16 +318,16 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@DRM-15</span>
+						<span class='category-name'>@Regression</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label others'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
 							
+							<span status="skip" class='label yellow darken-2 white-text'>Skipped: 2</span>
 						</div>
 						<div class='category-tests'>
 							<table class='bordered table-results'>
@@ -294,9 +340,52 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 20, 2022 12:59:18 AM</td>
-										<td class='linked' test-id='2'>User disables student record</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Aug 21, 2022 05:40:10 PM</td>
+										<td class='linked' test-id='2'>User Disables Student Record</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Aug 21, 2022 05:40:11 PM</td>
+										<td class='linked' test-id='13'>User Confirms Student Record is Disabled</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@DRM-15</span>
+						<span class='category-status right'>
+						<span class='label others'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							
+							<span status="skip" class='label yellow darken-2 white-text'>Skipped: 2</span>
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Aug 21, 2022 05:40:10 PM</td>
+										<td class='linked' test-id='2'>User Disables Student Record</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Aug 21, 2022 05:40:11 PM</td>
+										<td class='linked' test-id='13'>User Confirms Student Record is Disabled</td>
+										<td><span class='test-status skip'>skip</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -326,31 +415,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>8</div>
+					<div class='panel-lead'>16</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 20, 2022 12:59:15 AM</div>
+					<div class='panel-lead'>Aug 21, 2022 05:40:10 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 20, 2022 12:59:27 AM</div>
+			 		<div class='panel-lead'>Aug 21, 2022 05:40:11 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 11s+303ms</div>
+					<div class='panel-lead'>0h 0m 0s+338ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -366,12 +455,21 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@DRM-15</td>
-							<td>1</td>
+							<td>@Regression</td>
 							<td>0</td>
 							<td>0</td>
+							<td>2</td>
 							<td>
-									100%
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@DRM-15</td>
+							<td>0</td>
+							<td>0</td>
+							<td>2</td>
+							<td>
+									0%
 							</td>
 						</tr>
 					</table>
@@ -386,38 +484,38 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 1,
+				passParent: 0,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
-				skipParent: 0,
-				exceptionsParent: 0,
-				childCount: 1,
-				passChild: 1,
+				skipParent: 1,
+				exceptionsParent: 1,
+				childCount: 2,
+				passChild: 0,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
-				skipChild: 0,
+				skipChild: 2,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 0,
-				grandChildCount: 8,
-				passGrandChild: 8,
+				exceptionsChild: 2,
+				grandChildCount: 16,
+				passGrandChild: 1,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 15,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 15,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "Disable Student Record":8.657
+			        "Disable Student Record":0.038
 			};
 		</script>
 	
