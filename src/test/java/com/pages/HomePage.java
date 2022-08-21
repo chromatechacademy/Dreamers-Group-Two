@@ -59,6 +59,13 @@ public class HomePage {
     /** Mobile version of Sidebox menu of the Home Page */
     @FindBy(xpath = "//ul[@class='sidebar-menu verttop']")
     public WebElement sideBoxMobile;
+    /**Student Details Link */
+    @FindBy(xpath = "(//*[@href='https://chroma.mexil.it/student/search'])[2]")
+    public WebElement studentDetails;
+    /*Disable Students Link */
+    @FindBy(xpath = "//a[normalize-space()='Disabled Students']")
+    public WebElement DisabledStudentLink;
+
 
     /* This method will get name of all student information sub tabs */
     public List<String> getStudentInformationMenu() {

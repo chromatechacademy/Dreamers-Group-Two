@@ -1,7 +1,10 @@
 package com.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.http.WebSocket.Listener;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -32,6 +35,8 @@ public class ClassPage {
 
     public WebElement ciaTriadSection;
 
+
+    
     /** DYNAMIC XPATH for class added to class section */
 
     public WebElement classSectionsDynamicXPATH(String newClass) {
