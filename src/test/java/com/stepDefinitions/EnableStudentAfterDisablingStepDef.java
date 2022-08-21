@@ -82,7 +82,7 @@ public class EnableStudentAfterDisablingStepDef {
     }
 
     @Then("a teacher or admin disables the Student Record")
-    public void a_teacher_or_admin_disables_the_Student_Record() throws InterruptedException,IOException {
+    public void a_teacher_or_admin_disables_the_Student_Record() throws InterruptedException, IOException {
         studentDetailsPage.DisableRedButton.click();
         Thread.sleep(1000);
         CommonUtils.acceptAlert();
@@ -154,7 +154,6 @@ public class EnableStudentAfterDisablingStepDef {
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
 
-        
     }
 
 }

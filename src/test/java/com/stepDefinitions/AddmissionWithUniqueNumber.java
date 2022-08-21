@@ -153,8 +153,6 @@ public class AddmissionWithUniqueNumber {
 
     }
 
-  
-
     @Then("user clicks on Search button")
     public void user_clicks_on_Search_button() throws IOException {
         bulkDeletePage.searchButton.click();

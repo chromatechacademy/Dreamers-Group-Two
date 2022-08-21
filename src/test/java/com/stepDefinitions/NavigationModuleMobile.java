@@ -21,7 +21,6 @@ public class NavigationModuleMobile {
         homepage.sideBarButton.click();
     }
 
-
     @Then("the side box displays with following modules")
     public void the_side_box_displays_with_following_modules(String navigationModule)
             throws IOException, InterruptedException {
