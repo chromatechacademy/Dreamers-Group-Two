@@ -1,6 +1,6 @@
 Feature: Invalid Credential Mobile
 
-@Progression
+@Progression @DRM-22 @Lauren
 Scenario: A User should not be able to login with invalid credentials
 Given a user is on the chromatech website
 When a user enters invalid credentials such as username "test@testmail.com" and password "Happy123!"

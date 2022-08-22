@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }, 
 		features = "src/test/java/com/features", 
 		glue = "com.stepDefinitions", 
-		tags = "@Smoke", 
+		tags = "@DRM-1", 
 		dryRun = false, 
 		monochrome = true, 
 		strict = true)

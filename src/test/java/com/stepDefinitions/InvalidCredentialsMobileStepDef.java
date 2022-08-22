@@ -35,7 +35,8 @@ public class InvalidCredentialsMobileStepDef {
     }
 
     @Then("a user should see message {string}")
-    public void a_user_should_see_message(String expectedPageTitle) throws IOException {
+    public void a_user_should_see_message(String expectedPageTitle) throws IOException, InterruptedException {
+        Thread.sleep(2000);
         String actualPageTitle = loginPage.invalidUsernameOrPasswordMessage.getText();
         Assert.assertTrue(expectedPageTitle.contentEquals(actualPageTitle));
         CucumberLogUtils.logExtentScreenshot();
