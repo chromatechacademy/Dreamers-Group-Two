@@ -29,27 +29,31 @@ public class ExpenseModulestepdef {
   HomePage homePage = new HomePage();
   WebDriverUtils driver = new WebDriverUtils();
 
+  // ** USER IS LOGGED IN AND ON THE HOME PAGE */
   @Given("a user is on the home page")
   public void a_user_is_on_the_home_page() {
-
     WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
     loginPage.usernameTextBox.sendKeys(ApplicationConstants.USERNAME);
     loginPage.passwordTextBox.sendKeys(ApplicationConstants.PASSWORD);
     loginPage.signInButton.click();
   }
 
+  // ** USER CLICKS ON "EXPENSES" ON THE SIDE DASHBOARD*/
   @When("user clicks on {string} on the side dashboard")
-   public void user_clicks_on_on_the_side_dashboard(String string) throws InterruptedException {
+  public void user_clicks_on_on_the_side_dashboard(String string) throws InterruptedException {
     CommonUtils.waitForVisibility(homePage.expensesButton);
     homePage.expensesButton.click();
-    Thread.sleep(3000);
+    // Thread.sleep(3000);
   }
 
+  // **"Expenses" tab displays "AddExpense", "Search Expense", "Expense Head" */
   @Then("{string} tab displays {string}, {string}, {string}")
-  public void tab_displays(String string, String string2, String string3, String string4) throws IOException {
+  public void tab_displays(String string, String string2, String string3, String string4) throws IOException, InterruptedException {
     Assert.assertEquals(homePage.addExpenseButton.getText(), "Add Expense");
+    Thread.sleep(1000);
     Assert.assertEquals(homePage.searchExpenseButton.getText(), "Search Expense");
     Assert.assertEquals(homePage.expenseHeadButton.getText(), "Expense Head");
     CucumberLogUtils.logExtentScreenshot();
+    CucumberLogUtils.logScreenShot();
   }
 }

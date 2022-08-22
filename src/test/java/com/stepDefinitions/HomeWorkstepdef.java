@@ -19,6 +19,7 @@ public class HomeWorkstepdef {
     HomePage homePage = new HomePage();
     WebDriverUtils driver = new WebDriverUtils();
 
+    // ** User logs in and is on the home page ***//
     @Given("a user is on the homepage")
     public void a_user_is_on_the_homepage() {
         WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
@@ -27,6 +28,7 @@ public class HomeWorkstepdef {
         loginPage.signInButton.click();
     }
 
+    // ** user clicks on "Homework" in the side dashboard */
     @When("user clicks on {string} in the side dashboard")
     public void user_clicks_on_in_the_side_dashboard(String string) throws InterruptedException {
         homePage.homeWorkButton.click();
@@ -34,9 +36,11 @@ public class HomeWorkstepdef {
 
     }
 
-    @Then("{string} tab displays {string}")
-    public void tab_displays(String string, String string2) throws IOException {
+    // ** Then "Homework" tab displays subcatogory "Add Homework" */
+    @Then("{string} tab displays subcatogory {string}")
+    public void tab_displays_subcatogory(String string, String string2) throws IOException {
         Assert.assertEquals(homePage.addHomeWorkButton.getText(), "Add Homework");
         CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
     }
 }

@@ -15,7 +15,7 @@ Feature: Disable Student Record
 
 
 
-    @Regression @DRM-15
+    @Regression @DRM-150
     Scenario: User Confirms Student Record is Disabled
         Given User clicks on Disabled Student Button inside Student Information Module
         And User Selects "SDET" in Class Name and "Git/GitHub" section name
