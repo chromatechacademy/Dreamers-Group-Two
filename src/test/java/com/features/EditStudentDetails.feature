@@ -25,6 +25,9 @@ Scenario: CTSMS - Ability to edit student records
         And user changes the First name to "Andrew"
         And user clicks on save button on the Student Admission page
         Then the following "Record Update Successfully" displays on page
+        And user clicks in Search Button
+        And user clicks on Student Name with unique admission number "554433"
+        And page displays new name of the student "Andrew"
         And user navigates to Bulk Delete section of Student Information module
         And user selects SDET option in class section in Bulk Delete module
         And user clicks on Search button

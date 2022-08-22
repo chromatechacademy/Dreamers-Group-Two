@@ -14,6 +14,10 @@ public class HomePage {
     @FindBy(xpath = "//span[normalize-space()='Student Information']")
     public WebElement studentInformationLink;
 
+    // Student Details 
+    @FindBy(xpath = "//ul[@class='treeview-menu menu-open']//a[normalize-space()='Student Details']")
+    public WebElement studentDetailsElement;
+
     // Fees Collection
     @FindBy(xpath = "//span[normalize-space()='Fees Collection']")
     public WebElement feesCollectionModule;

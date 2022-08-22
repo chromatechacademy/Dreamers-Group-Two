@@ -50,4 +50,16 @@ public class EditStudentDetails {
         CucumberLogUtils.logScreenShot();
 
     }
+
+    @Then("user clicks on Student Name with unique admission number {string}")
+    public void user_clicks_on_Student_Name_with_unique_admission_number(String uniqueAdmissionNumber) {
+        studentDetailsPAge.studentDetaisNameDynamicXPATH(uniqueAdmissionNumber).click();
+    }
+
+    @Then("page displays new name of the student {string}")
+    public void page_displays_new_name_of_the_student(String studentName) throws IOException {
+        Assert.assertTrue(studentDetailsPAge.studentName.getText().contentEquals(studentName));
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
+    }
 }
