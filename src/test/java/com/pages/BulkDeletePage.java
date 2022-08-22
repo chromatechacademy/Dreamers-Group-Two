@@ -17,7 +17,6 @@ import com.web.WebDriverUtils;
 
 public class BulkDeletePage {
 
-
     // Bulk Delete
 
     @FindBy(xpath = "//a[normalize-space()='Bulk Delete']")
@@ -43,7 +42,7 @@ public class BulkDeletePage {
     public WebElement searchButton;
 
     // Delete button
-    
+
     @FindBy(xpath = "//button[@id='load']")
 
     public WebElement deleteButton;
@@ -57,8 +56,6 @@ public class BulkDeletePage {
                         + "')]/preceding-sibling::td/input[@type='checkbox']"));
 
     }
-
-    
 
     /** Class SDET of Bulf Delete Page */
     @FindBy(xpath = "//option[@value='9']")

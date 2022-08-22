@@ -55,8 +55,8 @@ public class AddAndDeleteClasses {
         loginPage.signInButton.click();
     }
 
-    /** Clicking on Academics Module 
-     * @throws InterruptedException*/
+    /** Clicking on Academics Module
+     * @throws InterruptedException */
     @When("navigates to Academics module")
     public void navigates_to_Academics_module() throws InterruptedException {
 
@@ -69,7 +69,7 @@ public class AddAndDeleteClasses {
     }
 
     /** Navigating and clicking on Class Section 
-     * @throws InterruptedException*/
+     * @throws InterruptedException */
     @When("user navigates to Class section")
     public void user_navigates_to_Class_section() throws InterruptedException {
         homePage.classModule.click();

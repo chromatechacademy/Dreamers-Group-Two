@@ -143,6 +143,8 @@ public class AddmissionWithUniqueNumber {
 
     @Then("user navigates to Bulk Delete section of Student Information module")
     public void user_navigates_to_Bulk_Delete_section_of_Student_Information_module() {
+
+        CommonUtils.waitForInvisibility(homePage.bulkDelete);
         homePage.bulkDelete.click();
     }
 
@@ -152,8 +154,6 @@ public class AddmissionWithUniqueNumber {
         bulkDeletePage.classBulkDelete.click();
 
     }
-
-  
 
     @Then("user clicks on Search button")
     public void user_clicks_on_Search_button() throws IOException {

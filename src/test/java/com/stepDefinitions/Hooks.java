@@ -14,8 +14,6 @@ import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
-
-
 public class Hooks extends WebDriverUtils {
 
     @Before
@@ -27,11 +25,8 @@ public class Hooks extends WebDriverUtils {
     }
 
     @After
-     public void end(Scenario scenario) throws IOException {
+    public void end(Scenario scenario) throws IOException {
         tearDown();
     }
-    
-   
-    
 
 }

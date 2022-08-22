@@ -1,7 +1,7 @@
 package com.pages;
 
+import java.util.ArrayList;
 import java.util.List;
-
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,6 +11,17 @@ import com.web.WebDriverUtils;
 
 public class HomePage {
 
+
+    /* Student Information sub tabs */
+    @FindBy(xpath = "//*[@id='sibe-box']/ul[2]/li[1]/ul[1]/li")
+    public List<WebElement> studentInformationBox;
+    // Academics Tab
+    @FindBy(xpath = "//span[normalize-space()='Academics']")
+    public WebElement AcademicsLink;
+    // Class sub Tab
+    @FindBy(xpath = "//a[normalize-space()='Class']")
+    public WebElement ClassLink;
+    /** Income Module */
 
     //Student Information
     @FindBy(xpath = "//span[normalize-space()='Student Information']")
@@ -44,9 +55,6 @@ public class HomePage {
     @FindBy(xpath = "//span[normalize-space()='Reports']")
     public WebElement reportsModule;
 
-   
-
-   
     /** Dropdown menu in Income Module */
     @FindBy(xpath = "//ul[@class='treeview-menu menu-open']")
     public WebElement incomeModuleMenu;
@@ -54,7 +62,7 @@ public class HomePage {
     /** Dropdown Menu in Human Resourse Module */
     @FindBy(xpath = "//ul[@class='treeview-menu menu-open']")
     public WebElement humanResourceModuleMenu;
-   
+
     /** Class section of Academics Module */
     @FindBy(xpath = "//a[normalize-space()='Class']")
     public WebElement classModule;
@@ -76,10 +84,27 @@ public class HomePage {
     /** Mobile version of Sidebox menu of the Home Page */
     @FindBy(xpath = "//ul[@class='sidebar-menu verttop']")
     public WebElement sideBoxMobile;
+    /**Student Details Link */
+    @FindBy(xpath = "(//*[@href='https://chroma.mexil.it/student/search'])[2]")
+    public WebElement studentDetails;
+    /*Disable Students Link */
+    @FindBy(xpath = "//a[normalize-space()='Disabled Students']")
+    public WebElement DisabledStudentLink;
+    /*Bulk Delete Link  Mobile Version */
+    @FindBy(xpath = "//*[@href='https://chroma.mexil.it/student/bulkdelete']")
+    public WebElement BulkDeleteButtonMobile;
+
+
+    /* This method will get name of all student information sub tabs */
+    public List<String> getStudentInformationMenu() {
+        List<String> studentInformationMenuTabs = new ArrayList<>();
+        for (WebElement studentInfoTab : studentInformationBox) {
+            studentInformationMenuTabs.add(studentInfoTab.getText());
+        }
+        return studentInformationMenuTabs;
+    }
 
     public HomePage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
-
-
 }

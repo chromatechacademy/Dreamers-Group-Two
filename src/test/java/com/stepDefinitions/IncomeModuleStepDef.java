@@ -22,8 +22,11 @@ public class IncomeModuleStepDef {
 
     HomePage homePage = new HomePage();
 
-    /** Open browser with URL 
-     * @throws IOException*/
+    /**
+     * Open browser with URL
+     * 
+     * @throws IOException
+     */
 
     @Given("user is on login page")
     public void user_is_on_login_page() throws IOException {
@@ -33,8 +36,11 @@ public class IncomeModuleStepDef {
 
     }
 
-    /** Entering username 
-     * @throws IOException*/
+    /**
+     * Entering username
+     * 
+     * @throws IOException
+     */
     @When("user enters valid username in Username box")
     public void user_enters_valid_username_in_Username_box() throws IOException {
         loginPage.usernameTextBox.sendKeys(ApplicationConstants.USERNAME);
@@ -43,8 +49,11 @@ public class IncomeModuleStepDef {
 
     }
 
-    /** Entering password 
-     * @throws IOException*/
+    /**
+     * Entering password
+     * 
+     * @throws IOException
+     */
     @When("user enters valid password in Password box")
     public void user_enters_valid_password_in_Password_box() throws IOException {
         loginPage.passwordTextBox.sendKeys(ApplicationConstants.PASSWORD);
@@ -53,8 +62,11 @@ public class IncomeModuleStepDef {
 
     }
 
-    /** Signing in 
-     * @throws IOException*/
+    /**
+     * Signing in
+     * 
+     * @throws IOException
+     */
     @When("user clicks on sign in button")
     public void user_clicks_on_sign_in_button() throws IOException {
         loginPage.signInButton.click();
@@ -63,15 +75,16 @@ public class IncomeModuleStepDef {
 
     }
 
-    /** Navigating to Income module 
-     * @throws InterruptedException*/
+    /**
+     * Navigating to Income module
+     * 
+     * @throws InterruptedException
+     */
     @When("user clicks on the Income module")
     public void user_clicks_on_the_Income_module() throws InterruptedException {
         homePage.incomeModule.click();
 
         CommonUtils.waitForVisibility(homePage.incomeModule);
-        
-        
 
     }
 

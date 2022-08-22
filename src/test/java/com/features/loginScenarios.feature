@@ -1,6 +1,7 @@
 Feature: Login Scenarios
 
-@Lauren @DRM-1 @Smoke
+@Smoke @Regression @DRM-1 @Lauren
+
 Scenario: Login with valid credentials
 Given a teacher or admin is on CTSMS login webpage
 When a teacher or admin is logging in with username "general@teacher.com" and password "123456"

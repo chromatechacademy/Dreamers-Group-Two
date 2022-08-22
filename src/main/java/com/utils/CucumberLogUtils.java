@@ -16,14 +16,12 @@ import org.openqa.selenium.TakesScreenshot;
 import cucumber.api.Scenario;
 
 public class CucumberLogUtils extends WebDriverUtils {
-	
-	
 
     public static Scenario scenario;
     public static String screenshotdir;
-    
+
     /**
-     * USE BELOW METHOD TO ATTACH SCREENSHOTS TO MAVEN CUCUMBER HTML REPORTS 
+     * USE BELOW METHOD TO ATTACH SCREENSHOTS TO MAVEN CUCUMBER HTML REPORTS
      */
     public static void logScreenShot() {
         if (scenario == null) {
@@ -34,26 +32,26 @@ public class CucumberLogUtils extends WebDriverUtils {
             scenario.embed(screenshot, "image/png"); // attach to the report
         }
     }
-    
+
     public static String getScreenShot() throws IOException {
-    	
-    	File src = ((TakesScreenshot) driver)
+
+        File src = ((TakesScreenshot) driver)
                 .getScreenshotAs(OutputType.FILE);
-    	Date date = new Date(); 
-    	SimpleDateFormat sdf = new SimpleDateFormat("ddMMYYYY_HHmmss"); 
-    	String sDate = sdf.format(date); 
-    	String filePath = System.getProperty("user.dir")+"/test-output/screenshots/image_"+sDate+".png";
-    	FileUtils.copyFile(src, new File(filePath));
-    
-    	return filePath;
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("ddMMYYYY_HHmmss");
+        String sDate = sdf.format(date);
+        String filePath = System.getProperty("user.dir") + "/test-output/screenshots/image_" + sDate + ".png";
+        FileUtils.copyFile(src, new File(filePath));
+
+        return filePath;
     }
-    
+
     /*
      * USE BELOW METHOD TO ATTACH SCREENSHOT TO EXTENT REPORTS
      */
     public static void logExtentScreenshot() throws IOException {
-    	
-    	ExtentCucumberAdapter.addTestStepScreenCaptureFromPath(getScreenShot());
+
+        ExtentCucumberAdapter.addTestStepScreenCaptureFromPath(getScreenShot());
     }
 
 }

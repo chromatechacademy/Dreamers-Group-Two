@@ -8,137 +8,132 @@ import com.web.WebDriverUtils;
 
 public class StudentAdmissionPage {
 
-
-    //student admission
+    // student admission
     @FindBy(xpath = "//a[normalize-space()='Student Admission']")
     public WebElement studentAdmissionLink;
 
-    //Admission no text
+    // Admission no text
     @FindBy(xpath = "//input[@name='admission_no']")
     public WebElement admissionNoTextBox;
 
-
-    //Roll Number text 
+    // Roll Number text
     @FindBy(xpath = "//input[@name='roll_no']")
     public WebElement rollNumberTextBox;
 
-    //Student Class text
+    // Student Class text
     @FindBy(xpath = "//select[@name='class_id']")
     public WebElement studentClass;
 
-    //Section
+    // Section
     @FindBy(xpath = "//select[@name='section_id']")
     public WebElement sectionDropDown;
 
-    //First name text
+    // First name text
     @FindBy(xpath = "//input[@name='firstname']")
     public WebElement firstNameTextBox;
 
-    //Last name text
+    // Last name text
     @FindBy(xpath = "//input[@name='lastname']")
     public WebElement lastNameTextBox;
 
-    // Gender 
+    // Gender
     @FindBy(xpath = "//select[@name='gender']")
     public WebElement genderDropDown;
 
-    //Date of birth
+    // Date of birth
     @FindBy(xpath = "//input[@name='dob']")
     public WebElement dateOfBirthTextBox;
 
-    //Category
+    // Category
     @FindBy(xpath = "//select[@name='category_id']")
     public WebElement categoryDropDown;
 
-    //Email text
+    // Email text
     @FindBy(xpath = "//input[@name='email']")
     public WebElement emailTextBox;
 
-    //Admission Date text
+    // Admission Date text
     @FindBy(xpath = "//input[@name='admission_date']")
     public WebElement admissionDateTextBox;
 
-    //Admission date
-    @FindBy(xpath = "//td[@class='day'][normalize-space()='1']" )
+    // Admission date
+    @FindBy(xpath = "//td[@class='day'][normalize-space()='1']")
     public WebElement admissionDateSelectElement;
 
-    //Blood group
+    // Blood group
     @FindBy(xpath = "//select[@name='blood_group']")
     public WebElement bloodGroupDropDown;
 
-    //As of date text
+    // As of date text
     @FindBy(xpath = "//input[@name='measure_date']")
     public WebElement asOfDateTextBox;
 
-    //Mobile number text
+    // Mobile number text
     @FindBy(xpath = "//*[@id='custom_fields[students][1]']")
     public WebElement mobileNumberTextBox;
 
-    //Height text
+    // Height text
     @FindBy(xpath = "//*[@id='custom_fields[students][2]']")
     public WebElement heightTextBox;
 
-    //Weight text
+    // Weight text
     @FindBy(xpath = "//*[@id='custom_fields[students][3]']")
-     public WebElement weightTextBox;
+    public WebElement weightTextBox;
 
-    //Selects mother
+    // Selects mother
     @FindBy(xpath = "//input[@value='mother']")
     public WebElement motherSelectionRadio;
 
-    //Father name text
+    // Father name text
     @FindBy(xpath = "//input[@name='father_name']")
     public WebElement fatherNameTextBox;
 
-    //Father phone text
+    // Father phone text
     @FindBy(xpath = "//input[@name='father_phone']")
     public WebElement fatherPhoneTextBox;
 
-    //Father occupation text
+    // Father occupation text
     @FindBy(xpath = "//input[@name='father_occupation']")
     public WebElement fatherOccupation;
 
-    //Mother name text
+    // Mother name text
     @FindBy(xpath = "//input[@name='mother_name']")
     public WebElement motherNameTextBox;
 
-    //Mother phone text
+    // Mother phone text
     @FindBy(xpath = "//input[@name='mother_phone']")
     public WebElement motherPhoneTextBox;
 
-    //Mother occupation text
+    // Mother occupation text
     @FindBy(xpath = "//input[@name='mother_occupation']")
     public WebElement motherOccupationTextBox;
 
-    //Guardian name text
+    // Guardian name text
     @FindBy(xpath = "//input[@name='guardian_name']")
     public WebElement guardianNameTextBox;
 
-    //Guardian email text
+    // Guardian email text
     @FindBy(xpath = "//input[@name='guardian_email']")
     public WebElement guardianEmailTextBox;
 
-    //Guardian phone text
+    // Guardian phone text
     @FindBy(xpath = "//input[@name='guardian_phone']")
     public WebElement guardianPhoneTextBox;
 
-    //Guardian occupation text
+    // Guardian occupation text
     @FindBy(xpath = "//input[@name='guardian_occupation']")
     public WebElement guardianOccupationTextBox;
 
-    //Guardian address text
+    // Guardian address text
     @FindBy(xpath = "//textarea[@name='guardian_address']")
     public WebElement guardianAddressTextBox;
 
-    //Click save
+    // Click save
     @FindBy(xpath = "//button[@type='submit'][normalize-space()='Save']")
     public WebElement saveButton;
 
     @FindBy(xpath = "//div[@class='alert alert-success']")
     public WebElement successMessage;
-
-    
-
 
     /** Andmission No textbox */
     @FindBy(xpath = "//input[@id='admission_no']")
@@ -167,7 +162,7 @@ public class StudentAdmissionPage {
     /** Guardian Phone Number textbox */
     @FindBy(xpath = "//input[@id='guardian_phone']")
     public WebElement guardianPhoneNumber;
-   
+
     /**
      * The warning message below Admission No textbox. Appears only if entering the
      * admission number of student that has been already admitted

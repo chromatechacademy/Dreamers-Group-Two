@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.web.WebDriverUtils;
 
 public class ClassPage {
+
     /** Class Input textbox */
     @FindBy(xpath = "//input[@id='class']")
 
@@ -37,6 +38,14 @@ public class ClassPage {
 
         return WebDriverUtils.driver.findElement(
                 By.xpath("//*[contains(text(),'" + newClass + "')]/following-sibling::td/a[2]"));
+
+    }
+
+    // *DYNMIC XPATH for class and section table */
+    public WebElement sectionsInClassListDynamicXpath(String className) {
+
+        return WebDriverUtils.driver.findElement(
+                By.xpath("//tr/td[contains(text(),'" + className + "')]/following-sibling::td[1]"));
 
     }
 

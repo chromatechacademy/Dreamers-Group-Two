@@ -102,27 +102,28 @@ public class StudentAdmissionStepDef {
         Thread.sleep(3000);
         CommonUtils.waitForVisibility(studentAdmissionPage.successMessage);
         Assert.assertTrue(studentAdmissionPage.successMessage.getText().contentEquals(successMessage));
-        
+
     }
 
     @Then("user deletes student record with class {string} and section {string} and admission no {string}")
-    public void user_deletes_student_record_with_class_and_section_and_admission_no(String className, String selectionName,
+    public void user_deletes_student_record_with_class_and_section_and_admission_no(String className,
+            String selectionName,
             String admissionNo) throws InterruptedException, IOException {
-                CommonUtils.waitForVisibility(bulkDeletePage.bulkDeleteLink);
-                bulkDeletePage.bulkDeleteLink.click();
-                Thread.sleep(3000);
-                CommonUtils.waitForVisibility(bulkDeletePage.classNameDropDown);
-                CommonUtils.selectDropDownValue(className, bulkDeletePage.classNameDropDown);
-                Thread.sleep(3000);
-                CommonUtils.selectDropDownValue(selectionName, bulkDeletePage.sectionNameDropDown);
-                bulkDeletePage.searchButton.click();
-                Thread.sleep(1000);
-                bulkDeletePage.bulkDeleteDynamicXpath(admissionNo).click();
-                bulkDeletePage.deleteButton.click();
-                CommonUtils.acceptAlert();
-                Thread.sleep(3000);
-                CucumberLogUtils.logScreenShot();
-                CucumberLogUtils.logExtentScreenshot();
+        CommonUtils.waitForVisibility(bulkDeletePage.bulkDeleteLink);
+        bulkDeletePage.bulkDeleteLink.click();
+        Thread.sleep(3000);
+        CommonUtils.waitForVisibility(bulkDeletePage.classNameDropDown);
+        CommonUtils.selectDropDownValue(className, bulkDeletePage.classNameDropDown);
+        Thread.sleep(3000);
+        CommonUtils.selectDropDownValue(selectionName, bulkDeletePage.sectionNameDropDown);
+        bulkDeletePage.searchButton.click();
+        Thread.sleep(1000);
+        bulkDeletePage.bulkDeleteDynamicXpath(admissionNo).click();
+        bulkDeletePage.deleteButton.click();
+        CommonUtils.acceptAlert();
+        Thread.sleep(3000);
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
 
     }
 }

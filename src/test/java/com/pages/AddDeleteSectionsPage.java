@@ -29,6 +29,5 @@ public class AddDeleteSectionsPage {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
 
-      
 
 }
