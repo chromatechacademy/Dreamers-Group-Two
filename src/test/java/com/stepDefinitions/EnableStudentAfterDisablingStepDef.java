@@ -29,29 +29,29 @@ public class EnableStudentAfterDisablingStepDef {
             String firstName, String lastName, String gender, String dateOfBirth) throws InterruptedException {
         studentAdmissionPage.admissionNoTextBox.sendKeys(admissionNo);
         CommonUtils.selectDropDownValue(student_class, studentAdmissionPage.studentClass);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         CommonUtils.waitForVisibility(studentAdmissionPage.sectionDropDown);
         CommonUtils.selectDropDownValue(section, studentAdmissionPage.sectionDropDown);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         studentAdmissionPage.firstNameTextBox.sendKeys(firstName);
         studentAdmissionPage.lastNameTextBox.sendKeys(lastName);
         CommonUtils.selectDropDownValue(gender, studentAdmissionPage.genderDropDown);
         JavascriptUtils.selectDateByJS(studentAdmissionPage.dateOfBirthTextBox, dateOfBirth);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
 
     @When("enters guardian information {string},{string}")
     public void enters_guardian_information(String guardianName, String guardianPhone) throws InterruptedException {
         studentAdmissionPage.guardianNameTextBox.sendKeys(guardianName);
         studentAdmissionPage.guardianPhoneTextBox.sendKeys(guardianPhone);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
     }
 
     @When("a teacher or admin clicks on Save button")
     public void a_teacher_or_admin_clicks_on_Save_button() throws InterruptedException, IOException {
         studentAdmissionPage.saveButton.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
@@ -67,7 +67,7 @@ public class EnableStudentAfterDisablingStepDef {
     public void a_teacher_or_admin_searches_by_keyword(String keyword) throws InterruptedException, IOException {
         studentDetailsPage.SearchByKeywordTextBox.sendKeys(keyword);
         studentDetailsPage.SearchByKeyWordButton.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
@@ -77,24 +77,24 @@ public class EnableStudentAfterDisablingStepDef {
     @Then("a teacher or admin clicks on Student Name")
     public void a_teacher_or_admin_clicks_on_Student_Name() throws InterruptedException {
         studentDetailsPage.StudentLink.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
     }
 
     @Then("a teacher or admin disables the Student Record")
     public void a_teacher_or_admin_disables_the_Student_Record() throws InterruptedException, IOException {
         studentDetailsPage.DisableRedButton.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         CommonUtils.acceptAlert();
 
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
 
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         CommonUtils.selectDropDownValue("Very Loud", studentDetailsPage.DropDownReason);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         studentDetailsPage.SaveButtonDisableStudentPopUp.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
 
     // *The Student is disabled and has a Disabled reason */
@@ -120,7 +120,7 @@ public class EnableStudentAfterDisablingStepDef {
             throws InterruptedException, IOException {
         disabledStudentPage.SearchBoxByKeyword.sendKeys(keyword);
         disabledStudentPage.SearchButtonByKeyword.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
@@ -137,7 +137,7 @@ public class EnableStudentAfterDisablingStepDef {
     public void a_teacher_or_admin_enables_the_Student_Record() throws InterruptedException, IOException {
         disabledStudentPage.EnableGreenButton.click();
         CommonUtils.acceptAlert();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
@@ -149,7 +149,7 @@ public class EnableStudentAfterDisablingStepDef {
         homePage.studentDetails.click();
         studentDetailsPage.SearchByKeywordTextBox.sendKeys(keyword);
         studentDetailsPage.SearchByKeyWordButton.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         Assert.assertTrue(studentDetailsPage.EnabledStudentExist.isDisplayed());
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();

@@ -90,6 +90,9 @@ public class HomePage {
     /*Disable Students Link */
     @FindBy(xpath = "//a[normalize-space()='Disabled Students']")
     public WebElement DisabledStudentLink;
+    /*Bulk Delete Link  Mobile Version */
+    @FindBy(xpath = "//*[@href='https://chroma.mexil.it/student/bulkdelete']")
+    public WebElement BulkDeleteButtonMobile;
 
 
     /* This method will get name of all student information sub tabs */

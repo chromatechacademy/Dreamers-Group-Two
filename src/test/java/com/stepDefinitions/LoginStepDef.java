@@ -23,7 +23,6 @@ public class LoginStepDef {
     public void a_teacher_or_admin_is_on_CTSMS_login_webpage() throws IOException {
 
         WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
-        CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
 
@@ -31,7 +30,7 @@ public class LoginStepDef {
     public void a_teacher_or_admin_is_logging_in_with_username_and_password(String username, String password)
             throws IOException {
         CommonUtils.waitForVisibility(LoginPage.usernameTextBox);
-        CucumberLogUtils.logScreenShot();
+    
         CucumberLogUtils.logExtentScreenshot();
 
         LoginPage.usernameTextBox.sendKeys(username);
