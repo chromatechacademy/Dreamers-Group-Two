@@ -1,6 +1,6 @@
 Feature: Ability to add and delete sections
 
-@Smoke
+@Progression
  Scenario: CTSMS - Ability to add and delete sections
         Given the teacher is located on the CTSMS login webpage
         When the teacher uses username "general@teacher.com" and password "123456" and by expanding the Academics tab
